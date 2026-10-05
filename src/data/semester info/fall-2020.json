@@ -1,0 +1,72 @@
+[
+  {
+    "id": "apd",
+    "name": "APD",
+    "fellow": "Cassandra Rigsby",
+    "teamLead": "Lindsey Randall",
+    "interns": [
+      "Theresa Nguyen",
+      "Dan Nyagol",
+      "Veli Shabangu",
+      "Javier Alejandra Chaves"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": "Folder is Lost",
+    "teamLead": null,
+    "interns": [
+      "Cutter Molly",
+      "Kosco Elizabeth",
+      "Peace Mojekwu"
+    ]
+  },
+  {
+    "id": "oil-and-gas",
+    "name": "Oil and Gas",
+    "fellow": "Haley Rader",
+    "teamLead": "Dean Goodrich",
+    "interns": [
+      "Sabrina Vivar",
+      "Qais Al Muqbali",
+      "Chandler Doudican"
+    ]
+  },
+  {
+    "id": "soba-dev",
+    "name": "SoBA (Dev)",
+    "fellow": "Anna Young",
+    "teamLead": "Andrew Elaryan",
+    "interns": [
+      "Siva Ganta",
+      "Nithivarn Shanigaram",
+      "Sanjana Mudduluru",
+      "Maleah Willis"
+    ]
+  },
+  {
+    "id": "soba-biz",
+    "name": "SoBA (Biz)",
+    "fellow": "Cassandra Rigsby",
+    "teamLead": "Austin Chan",
+    "interns": [
+      "Ismael Carmona Casado",
+      "Talia Dean",
+      "Tiphelele Dlamini",
+      "Zama Magagula"
+    ]
+  },
+  {
+    "id": "tech-comm",
+    "name": "Tech Comm",
+    "fellow": "Haley Rader",
+    "teamLead": "Filipa Carvalho",
+    "interns": [
+      "Richard Papenfus",
+      "Kelen Caskey",
+      "Thando Mpofu",
+      "Isabelle Swanson"
+    ]
+  }
+]

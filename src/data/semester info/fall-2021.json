@@ -1,0 +1,86 @@
+[
+  {
+    "id": "apd",
+    "name": "APD",
+    "fellow": null,
+    "teamLead": "Preetha Thanu",
+    "interns": [
+      "Edita Pipic",
+      "Michael Williams",
+      "Patric Oketcho",
+      "Vivek Patel",
+      "Jessica Winkler"
+    ]
+  },
+  {
+    "id": "energy",
+    "name": "Energy",
+    "fellow": "Chandler Doudican",
+    "teamLead": "Thuwaiba Al Wahaibi",
+    "interns": [
+      "Wijdan Al-Jabri",
+      "Shivam Patel",
+      "Tobe Anyaezu",
+      "Kevin Sheppard"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": "Jessica Hooper",
+    "teamLead": "Peace Mojekwu",
+    "interns": [
+      "Irene Georgestone",
+      "Suraj Patel",
+      "Isaac Trachtenberg",
+      "Stuart Yamashita"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": "Chandler Doudican",
+    "teamLead": "Sona Nuguri",
+    "interns": [
+      "Kofi Gyening",
+      "Austin Rhines"
+    ]
+  },
+  {
+    "id": "soba-biz",
+    "name": "SoBA (Biz)",
+    "fellow": "Drew Yamashita",
+    "teamLead": "Haydn Hoffman",
+    "interns": [
+      "Zareen Khan",
+      "Sarah Eltell",
+      "Ruiqi Wei",
+      "Sumaya Sandhu"
+    ]
+  },
+  {
+    "id": "soba-dev",
+    "name": "SoBA (Dev)",
+    "fellow": null,
+    "teamLead": "Arjun Ganesan",
+    "interns": [
+      "Marcos Bernier",
+      "Addie Kammerlocher",
+      "Edward Reali",
+      "Rabiea Abo Taha",
+      "Benjamin Xia"
+    ]
+  },
+  {
+    "id": "tech-comm",
+    "name": "Tech Comm",
+    "fellow": "Filipa Carvalho",
+    "teamLead": "Jennifer Burrows",
+    "interns": [
+      "Siri Nuguri",
+      "Tanaka Ngwanga",
+      "Oyin Obisesan",
+      "Prakhyat Reddy"
+    ]
+  }
+]

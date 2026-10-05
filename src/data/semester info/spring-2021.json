@@ -1,0 +1,82 @@
+[
+  {
+    "id": "apd",
+    "name": "APD",
+    "fellow": null,
+    "teamLead": "Dan Nyagol",
+    "interns": [
+      "Merima Hasic",
+      "Seth Long",
+      "Preetha Thanunathan",
+      "Seaphi Molise"
+    ]
+  },
+  {
+    "id": "babel-analytics",
+    "name": "Babel Analytics",
+    "fellow": null,
+    "teamLead": "Rijutha Garimella",
+    "interns": [
+      "Harsh Patel",
+      "Dilina Abudurexiti"
+    ]
+  },
+  {
+    "id": "food-business-connector",
+    "name": "Food Business Connector",
+    "fellow": "Drew Yamashita",
+    "teamLead": "Richard Papenfus",
+    "interns": [
+      "Emma Biskup",
+      "Joy Nath",
+      "Kate Wheeler",
+      "Haydn Hoffman"
+    ]
+  },
+  {
+    "id": "soba-dev",
+    "name": "SoBA (Dev)",
+    "fellow": "Michael Asante",
+    "teamLead": "Sanjana Mudduluru",
+    "interns": [
+      "Abhigna Reddy",
+      "Arjun Ganesan",
+      "Ji Ni",
+      "Nilam Reshim"
+    ]
+  },
+  {
+    "id": "soba-biz",
+    "name": "SoBA (Biz)",
+    "fellow": null,
+    "teamLead": "Talia Dean",
+    "interns": [
+      "Aida Sertovic",
+      "Corona Anderson",
+      "Kristina Aleksanyan",
+      "Owen Lusky"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Racheal Davis",
+    "interns": [
+      "Eric Enyong",
+      "Logesvar Balaguru"
+    ]
+  },
+  {
+    "id": "energy",
+    "name": "Energy",
+    "fellow": "Chandler Doudican",
+    "teamLead": "Isabelle Swanson",
+    "interns": [
+      "Thuwaiba Al Wahaibi",
+      "Nurlan Atauollin",
+      "Berri Tamfu",
+      "Jared Isaacson"
+    ]
+  }
+]

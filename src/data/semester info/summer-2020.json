@@ -1,0 +1,46 @@
+[
+  {
+    "id": "connect-our-kids",
+    "name": "Connect Our Kids",
+    "fellow": "Jamie Franzese",
+    "teamLead": null,
+    "interns": [
+      "Brian Cain",
+      "Zach DeGeorge",
+      "Maggie Giovannetti",
+      "Beth Grundy",
+      "Samuel Joy Tandeka"
+    ]
+  },
+  {
+    "id": "keto-a-i",
+    "name": "Keto A.I.",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Orin Imtiaz",
+      "Chase Bonar"
+    ]
+  },
+  {
+    "id": "urban-agrarian",
+    "name": "Urban Agrarian",
+    "fellow": null,
+    "teamLead": "Alyssa Campbell",
+    "interns": [
+      "Chandler Doudican",
+      "Nicole Giordano",
+      "Alex Parsells"
+    ]
+  },
+  {
+    "id": "virtual-home-buying-platform",
+    "name": "Virtual Home-Buying Platform",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Mohammad Alwahdanee",
+      "Jules Sy"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "unknown-team",
+    "name": "Unknown Team",
+    "fellow": null,
+    "teamLead": "Peace Mojekwu",
+    "interns": [
+      "Christabel Afari-Acquah",
+      "Irene Georgestone"
+    ]
+  }
+]

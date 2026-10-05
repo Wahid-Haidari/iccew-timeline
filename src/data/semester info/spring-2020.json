@@ -1,0 +1,74 @@
+[
+  {
+    "id": "apd",
+    "name": "APD",
+    "fellow": "Jamie Franzese",
+    "teamLead": "Asmita Baruah",
+    "interns": [
+      "Mohammad Alwadhanee",
+      "Sifiso Ginindza",
+      "Azmayn Inkishaf",
+      "Lindsey Randall"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": "Keith Nutter",
+    "teamLead": "Eva Sparks",
+    "interns": [
+      "Drew Yamashita",
+      "Rachel Lobaugh",
+      "Colt Bennett",
+      "H. Pike"
+    ]
+  },
+  {
+    "id": "oil-and-gas",
+    "name": "Oil and Gas",
+    "fellow": "Haley Rader",
+    "teamLead": "Dean Goodrich",
+    "interns": [
+      "Sabrina Vivar",
+      "Chandler Doudican",
+      "Qais Al Magbali"
+    ]
+  },
+  {
+    "id": "soba-dev",
+    "name": "SoBA (Dev)",
+    "fellow": null,
+    "teamLead": "Anna Young",
+    "interns": [
+      "Andrew Elaryan",
+      "Chanukya Lakamsani",
+      "Sai Maryada",
+      "Shiqiao Wang"
+    ]
+  },
+  {
+    "id": "soba-biz",
+    "name": "SoBA (Biz)",
+    "fellow": null,
+    "teamLead": "Alyssa Campbell",
+    "interns": [
+      "Laura Bertran",
+      "Austin Chan",
+      "Ali Al Khayer",
+      "Jules Philippe Sy"
+    ]
+  },
+  {
+    "id": "tech-comm",
+    "name": "Tech Comm",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Vy Dinh",
+      "Mitchelle Katemauswa",
+      "Filipa Carvalho",
+      "Eduardo Campbell",
+      "Jacob Moser"
+    ]
+  }
+]

@@ -4,71 +4,41 @@
     "name": "Energy",
     "fellow": "Sarah Eltell",
     "teamLead": "Shubhashree Sathe",
-    "interns": [
-      "Hawaou Elhadji Abdou",
-      "Kadon Le",
-      "Lincoln Wright",
-      "Surya Kapoor"
-    ]
+    "interns": ["Hawaou Elhadji Abdou", "Kadon Le", "Lincoln Wright", "Surya Kapoor"]
   },
   {
     "id": "ofa",
     "name": "OFA",
     "fellow": "Sarah Eltell and Hadassah Terry",
     "teamLead": "Faith Ferrell",
-    "interns": [
-      "Abdulamid Fakoya",
-      "Melanie Brusnahan",
-      "Luke Hamilton",
-      "Derrick Bowen",
-      "Abdallah Al Balushi"
-    ]
+    "interns": ["Abdulamid Fakoya", "Melanie Brusnahan", "Luke Hamilton", "Derrick Bowen", "Abdallah Al Balushi"]
   },
   {
     "id": "okc",
     "name": "OKC",
     "fellow": "Reety Erwin",
     "teamLead": "Donald Albers",
-    "interns": [
-      "Juardon Neal",
-      "Rachelle Richmond",
-      "Kingsley Uzogor",
-      "Blake Winchester"
-    ]
+    "interns": ["Juardon Neal", "Rachelle Richmond", "Kingsley Uzogor", "Blake Winchester"]
   },
   {
     "id": "soba-biz",
     "name": "SoBA (Biz)",
     "fellow": "Sarah Eltell",
     "teamLead": "Jonathan Dumar",
-    "interns": [
-      "Luka Jercic",
-      "Brandon Kieu",
-      "Prisca Mbainayel"
-    ]
+    "interns": ["Luka Jercic", "Brandon Kieu", "Prisca Mbainayel"]
   },
   {
     "id": "soba-dev",
     "name": "SoBA (Dev)",
     "fellow": "Sarah Eltell",
     "teamLead": "Tina Nguyen",
-    "interns": [
-      "Maria Doan",
-      "Jamshed Karimnazarov",
-      "Rebekah Lee",
-      "Stephen Song"
-    ]
+    "interns": ["Maria Doan", "Jamshed Karimnazarov", "Rebekah Lee", "Stephen Song"]
   },
   {
     "id": "soc-ent",
     "name": "SocEnt",
     "fellow": "Hadassah Terry",
     "teamLead": "Christabel Afari-Acquah",
-    "interns": [
-      "Ahmed Abdelaziz",
-      "Dieakololaoluwa Adebakin",
-      "Daniel Jackson",
-      "Mona Salem"
-    ]
+    "interns": ["Ahmed Abdelaziz", "Diekololaoluwa Adebakin", "Daniel Jackson", "Mona Salem"]
   }
 ]

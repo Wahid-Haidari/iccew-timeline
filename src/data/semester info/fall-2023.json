@@ -1,0 +1,44 @@
+[
+  {
+    "id": "energy",
+    "name": "Energy",
+    "fellow": "Sarah Eltell",
+    "teamLead": "Diekololaoluwa Adebakin",
+    "interns": ["Caitlin Cotteler", "Sarah Cate Lay", "Sunny Wickramasinghe", "Trace Tuthill"]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": "Sarah Eltell",
+    "teamLead": "Luke Hamilton",
+    "interns": ["Oluwademilade Jooda", "Jennifer Lubwama", "Ashlyn Darter", "Vineet Madur"]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": "Madison Hemenway",
+    "teamLead": "Blake Winchester",
+    "interns": ["Martin Gonzalez", "Nishant Ahlawat", "Justyna Luczak", "Martha Tsaliki"]
+  },
+  {
+    "id": "soba-biz",
+    "name": "SoBA (Biz)",
+    "fellow": "Peyton Nealis",
+    "teamLead": "Prisca Mbainayel",
+    "interns": ["Tadiwa Mugwadi", "Michael Papenfus", "Luke Portman"]
+  },
+  {
+    "id": "soba-dev",
+    "name": "SoBA (Dev)",
+    "fellow": null,
+    "teamLead": "Maria Doan",
+    "interns": ["Cecilia Pham", "Teddy Diallo", "Baseer Khan", "Kashaf Mujeeb", "Claire Nguyen"]
+  },
+  {
+    "id": "apd",
+    "name": "APD",
+    "fellow": "Peyton Nealis",
+    "teamLead": "Peter Amprako",
+    "interns": ["Bonkhe Magongo", "Celine Polepole", "Kamso Nwafor", "Adesh Bhor", "Luke Jung"]
+  }
+]

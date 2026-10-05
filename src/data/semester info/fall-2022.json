@@ -1,0 +1,44 @@
+[
+  {
+    "id": "apd",
+    "name": "APD",
+    "fellow": "Sarah Eltell",
+    "teamLead": "Peyton Nealis",
+    "interns": ["Andrew L. Brown", "Fabio Santini Bianco", "Peter Amprako", "Vinh D. Nguyen"]
+  },
+  {
+    "id": "energy",
+    "name": "Energy",
+    "fellow": "Sarah Eltell",
+    "teamLead": "John Noel",
+    "interns": ["Chinedu Candidus Nsude", "Jakob Paugh", "Mercy Ndagire", "Shubhashree Sathe"]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": "Reety Erwin",
+    "teamLead": "Bujana Allushi",
+    "interns": ["Jon Hendrix", "Donald Albers"]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": "Hadassah Terry",
+    "teamLead": "Erica Miller",
+    "interns": ["Zuyyin Izza Mohamed Shiraj", "Faith Ferrell", "Jack DeLester"]
+  },
+  {
+    "id": "soba-biz",
+    "name": "SoBA (Biz)",
+    "fellow": "Sarah Eltell",
+    "teamLead": "Emma Biskup",
+    "interns": ["Sophie Miller", "Jonathan Dumar", "Jonah Barth"]
+  },
+  {
+    "id": "soba-dev",
+    "name": "SoBA (Dev)",
+    "fellow": null,
+    "teamLead": "Maya Stell",
+    "interns": ["Karan Peo", "Fazil Raja", "Tina Nguyen", "Nima Shadaram", "Willie Zeng"]
+  }
+]

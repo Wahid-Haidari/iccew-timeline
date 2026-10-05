@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import InternsAccordion from './InternsAccordion'
 
 const colorMap = {
@@ -12,11 +13,27 @@ const colorMap = {
 
 const defaultColor = 'bg-slate-600/80 border-slate-500'
 
-export default function ProgramCard({ program }) {
+export default function ProgramCard({
+  program,
+  semesterId,
+  accordionOpen,
+  onAccordionToggle,
+}) {
+  const [localAccordionOpen, setLocalAccordionOpen] = useState(false)
+  const isControlled = typeof accordionOpen === 'boolean'
+  const isAccordionOpen = isControlled ? accordionOpen : localAccordionOpen
   const colors = colorMap[program.name] || defaultColor
 
+  function handleAccordionToggle(isOpen) {
+    if (!isControlled) {
+      setLocalAccordionOpen(isOpen)
+    }
+
+    onAccordionToggle?.(isOpen)
+  }
+
   return (
-    <div className={`rounded-xl border p-4 ${colors} backdrop-blur-sm`}>
+    <div className={`${isAccordionOpen ? 'h-80' : 'min-h-40'} rounded-xl border p-4 ${colors} backdrop-blur-sm`}>
       <div className="mb-3 flex items-center gap-2">
         <h3 className="text-lg font-bold text-white">{program.name}</h3>
         <span className="rounded bg-white/20 px-1.5 py-0.5 text-xs font-semibold text-white">
@@ -25,17 +42,26 @@ export default function ProgramCard({ program }) {
       </div>
 
       <div className="mb-3 space-y-0.5 text-sm text-slate-200">
-        {program.fellow && (
-          <p>
-            <span className="text-slate-400">Fellow:</span> {program.fellow}
-          </p>
-        )}
-        <p>
+        <p
+          className={program.fellow ? undefined : 'invisible'}
+          aria-hidden={!program.fellow}
+        >
+          <span className="text-slate-400">Fellow:</span> {program.fellow}
+        </p>
+        <p
+          data-semester-id={semesterId}
+          data-team-lead={program.teamLead ?? undefined}
+        >
           <span className="text-slate-400">TL:</span> {program.teamLead}
         </p>
       </div>
 
-      <InternsAccordion interns={program.interns} />
+      <InternsAccordion
+        interns={program.interns}
+        semesterId={semesterId}
+        open={isAccordionOpen}
+        onToggle={handleAccordionToggle}
+      />
     </div>
   )
 }

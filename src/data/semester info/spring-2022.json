@@ -1,0 +1,44 @@
+[
+  {
+    "id": "apd",
+    "name": "APD",
+    "fellow": "Drew",
+    "teamLead": "Michael Williams",
+    "interns": ["Casey Seale", "Prince Oburoni-Ayeh", "Peyton Nealis"]
+  },
+  {
+    "id": "soba-dev",
+    "name": "SoBA (Dev)",
+    "fellow": "Arjun",
+    "teamLead": "Addie Kammerlocher",
+    "interns": ["Jesse Blackledge", "Anthony Immenshuh", "Maya Stell", "Ted Xiong"]
+  },
+  {
+    "id": "soba-biz",
+    "name": "SoBA (Biz)",
+    "fellow": "Arjun",
+    "teamLead": "Joy Nath",
+    "interns": ["Kirabo Banya", "Maduo Dijeng", "Averie Gibbins"]
+  },
+  {
+    "id": "okc-talento",
+    "name": "OKC (Talento)",
+    "fellow": "Chandler",
+    "teamLead": "Sona Nuguri",
+    "interns": ["Jonathan Hendrix", "Muhammad Riaz"]
+  },
+  {
+    "id": "okc-ou-med",
+    "name": "OKC (OU Med)",
+    "fellow": "Chandler",
+    "teamLead": "Reety Erwin",
+    "interns": ["Bujana Allushi", "Fiifi Neizer-Ashun"]
+  },
+  {
+    "id": "energy",
+    "name": "Energy",
+    "fellow": "Chandler",
+    "teamLead": "Sarah Eltell",
+    "interns": ["John Noel", "Nondumiso Mndzeblel", "Christabel Afari-Acquah"]
+  }
+]
