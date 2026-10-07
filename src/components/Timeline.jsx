@@ -486,8 +486,8 @@ export default function Timeline({
               Timeline
             </span>
           </h1>
-          <div className="w-80 shrink-0">
-            <div className="flex flex-wrap gap-3">
+          <div className="ml-auto flex w-80 shrink-0 flex-col items-end">
+            <div className="flex w-full flex-wrap justify-end gap-3">
               <button
                 onClick={toggleFamilyTree}
                 className="rounded-lg border border-[#841617] bg-[#841617] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#681112]"
@@ -502,7 +502,7 @@ export default function Timeline({
                 Add team
               </button>
             </div>
-            <div className="mt-4">
+            <div className="mt-4 w-full">
               <label htmlFor="people-search" className="sr-only">Search people</label>
               <input
                 id="people-search"
@@ -540,8 +540,8 @@ export default function Timeline({
                 </div>
               )}
             </div>
-            <p className="mt-4 text-sm text-[#5a5a5a]">Drag cards within a semester to reorder them.</p>
-            {reorderError && <p className="mt-2 text-sm font-medium text-[#841617]">{reorderError}</p>}
+            <p className="mt-4 w-full text-right text-sm text-[#5a5a5a]">Drag cards within a semester to reorder them.</p>
+            {reorderError && <p className="mt-2 w-full text-right text-sm font-medium text-[#841617]">{reorderError}</p>}
           </div>
         </div>
 

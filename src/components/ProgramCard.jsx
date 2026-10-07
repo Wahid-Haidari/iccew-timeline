@@ -182,7 +182,7 @@ export default function ProgramCard({
         onDragOver={onDragOver}
         onDrop={onDrop}
         onDragEnd={onDragEnd}
-        className={`${isAccordionOpen ? 'min-h-80' : 'min-h-40'} rounded-xl border-2 p-4 text-[#323232] shadow-sm ${colors} ${draggable ? 'cursor-grab active:cursor-grabbing' : ''}`}
+        className={`${isAccordionOpen ? 'min-h-80' : 'min-h-40'} rounded-xl border-2 p-4 text-[#323232] shadow-[0_3px_10px_rgba(50,50,50,0.12)] ${colors} ${draggable ? 'cursor-grab active:cursor-grabbing' : ''}`}
       >
         <div className="mb-3 flex items-center gap-2">
           <div className="flex items-center gap-2">
