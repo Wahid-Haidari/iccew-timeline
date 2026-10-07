@@ -1,0 +1,85 @@
+[
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Baseer Khan",
+    "interns": [
+      "Akel Sozudogru",
+      "Rajeev Kumar",
+      "Anany Gupta",
+      "Paul Gariy"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Caitlin Cotteleer",
+    "interns": [
+      "Alexis Kituuka",
+      "Cal Smith",
+      "Martín Bruno",
+      "Najib Saleh"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Jake Dyke",
+    "interns": [
+      "Abby Brunnert",
+      "Devyn Newman",
+      "Raeed Zainuddin",
+      "Agya Gaaro"
+    ]
+  },
+  {
+    "id": "ca",
+    "name": "CA",
+    "fellow": null,
+    "teamLead": "Wesley Bruce",
+    "interns": [
+      "Kendall Cousins",
+      "Matthew Anderson",
+      "Karissa Colombe"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Marjan Maro Zovko",
+    "interns": [
+      "Jason Meshili",
+      "Baylor Savage",
+      "Nicolas Cordova Velasco"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Justyna Luczak",
+    "interns": [
+      "Elian Tan Huynh",
+      "Katherine Fox",
+      "Madison Milan",
+      "Shahadat Hossain"
+    ]
+  },
+  {
+    "id": "vc",
+    "name": "VC",
+    "fellow": null,
+    "teamLead": "Abdulamid Fakoya",
+    "interns": [
+      "Himanshu Atwal",
+      "Tadiwa Mugwadi",
+      "Stephanie Uribe",
+      "Michael Papenfus",
+      "Sunny Wickramasinghe"
+    ]
+  }
+]

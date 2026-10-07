@@ -1,0 +1,87 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Meghan Saunders",
+    "interns": [
+      "Mckenna Beard",
+      "Julia Wynn",
+      "Allen Yen",
+      "Jake DiNucci"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Nick Sparks",
+    "interns": [
+      "Catherine Thomas",
+      "Samuel Chinchilla",
+      "Rui Zhang",
+      "Megan Nash",
+      "Joseph Asante",
+      "Landon Dare",
+      "Ana Mohammad-Zadeh"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Adam Avoian",
+    "interns": [
+      "Bradley Hulme",
+      "Kiersten Strachan",
+      "Adam Brobson"
+    ]
+  },
+  {
+    "id": "team-4",
+    "name": "Team 4",
+    "fellow": null,
+    "teamLead": "Robert Byrd",
+    "interns": [
+      "Jane Hsi",
+      "Daniel Cartwright",
+      "Katie Vanchiere",
+      "Meghan Gallagher"
+    ]
+  },
+  {
+    "id": "team-5",
+    "name": "Team 5",
+    "fellow": null,
+    "teamLead": "Michael Petri",
+    "interns": [
+      "Derrick Jones",
+      "Patrick Stevens",
+      "Rannyu Ngoran",
+      "Jon Schick"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Melissa Kunz",
+    "interns": [
+      "Lexi Brackett",
+      "Kyle Smith",
+      "Nyika Wilmore",
+      "Chelsea McCay",
+      "Shweta Bhosale"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Rita Rush",
+    "interns": [
+      "Jayme Hunt",
+      "Mackenzie Shipp"
+    ]
+  }
+]

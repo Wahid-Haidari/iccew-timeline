@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ca",
+    "name": "CA",
+    "fellow": null,
+    "teamLead": "Greta Fielder",
+    "interns": [
+      "Younji Sohn",
+      "Brian Phillips",
+      "April Nguyen"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Collin Owen",
+    "interns": [
+      "Chase Bonar",
+      "Nikiel Kim",
+      "Keith Nutter",
+      "Mary Vu"
+    ]
+  },
+  {
+    "id": "oil-and-gas",
+    "name": "Oil and Gas",
+    "fellow": null,
+    "teamLead": "John Roff",
+    "interns": [
+      "Platin Iradukanda",
+      "Ducha Hapsari",
+      "Antonio Manuel"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Emily Sharp",
+    "interns": [
+      "Millet Gilmore",
+      "Dorothy Lam",
+      "Jacob Moser",
+      "Jordan Zimmerman"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Richard Yang",
+    "interns": [
+      "Alan Lee",
+      "Amy Le",
+      "James Martindale",
+      "John Tran"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Moises Martinez",
+    "interns": [
+      "Michael Asanta",
+      "Zachary Coronado",
+      "Gary Sefah",
+      "Alex Zhang"
+    ]
+  },
+  {
+    "id": "alumni",
+    "name": "Alumni",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Emma Greene",
+      "Alex Hayes",
+      "Sona Nuguri"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Betsy Waller",
+    "interns": [
+      "Souwelimatou Amadou Amani",
+      "Kate Byrne",
+      "Micah Gillezeau",
+      "Angel Giron"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Ronald Smith",
+    "interns": [
+      "Marvin Manalastas",
+      "Andrea Pemberton",
+      "Elissa Renberg",
+      "Caitlin Turner"
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Jake DiNucci and Catherine Thomas",
+    "interns": [
+      "Aric Kampschaefer",
+      "Krishna Manohar",
+      "Matt Woods",
+      "Arlette Rojano",
+      "Kevin Dunham",
+      "Jared Bond",
+      "Kevin Reimnitz",
+      "Cody Crow"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Bradley Hulme",
+    "interns": [
+      "Jeremy Allen",
+      "Benjamin Acker",
+      "Brittany Ribble",
+      "Lena Erickson"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Lauren Gilbert",
+    "interns": [
+      "Mariah Butler",
+      "Nick Estes"
+    ]
+  },
+  {
+    "id": "team-4",
+    "name": "Team 4",
+    "fellow": null,
+    "teamLead": "Katie Vanchiere",
+    "interns": [
+      "Cici Zhou",
+      "Cooper Lund",
+      "Asheema Pruthi",
+      "Nikita Hussain"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Allie Grantham",
+    "interns": [
+      "Cassandra Rigsby",
+      "Anand Shankar",
+      "Paul Abbey"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Jayme Hunt",
+    "interns": [
+      "Matthew Warner",
+      "Eli Weathers",
+      "Joe Nguyen"
+    ]
+  }
+]

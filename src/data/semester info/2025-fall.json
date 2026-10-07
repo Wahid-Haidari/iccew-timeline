@@ -1,0 +1,88 @@
+[
+  {
+    "id": "energy",
+    "name": "Energy",
+    "fellow": "Jake Dyke",
+    "teamLead": "Kendall Cousins",
+    "interns": [
+      "Anna Birgitta Nilsson",
+      "Anoushika Singh",
+      "Kaivalya Meduri",
+      "Nelly Komuhendo"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": "Diekololaoluwa Adebakin",
+    "teamLead": "Andipanyasha Mutevedzi",
+    "interns": [
+      "Alina Hemani",
+      "Bradley Buss",
+      "Faith Ndeh",
+      "Neil Luhar"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": "Baylor Savage",
+    "teamLead": "Tyler Vuong",
+    "interns": [
+      "Benjamin Tirado",
+      "Joshua Kam",
+      "Kazi Priom",
+      "Oumarou Gouba",
+      "Sujan Ayyagari"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": "Baylor Savage",
+    "teamLead": "Alexis Kituuka",
+    "interns": [
+      "Kennedy Corbin",
+      "Matthew Beyer",
+      "Reed Brackett",
+      "Reem Kotaiche"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": "Peter Amprako",
+    "teamLead": "Deepak Jha",
+    "interns": [
+      "Dayln Nguyen",
+      "Lily Mosisa",
+      "Maryam Amin",
+      "Zaid Jasasra",
+      "Thao Tran"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": "Jake Dyke and Diekololaoluwa Adebakin",
+    "teamLead": "Mike Dai Liangzhi",
+    "interns": [
+      "Alice Nanyanzi",
+      "Carl McKinney",
+      "David Bolade",
+      "Zach Zvonecek"
+    ]
+  },
+  {
+    "id": "vc",
+    "name": "VC",
+    "fellow": "Tadiwa Mugwadi",
+    "teamLead": null,
+    "interns": [
+      "Tanaka Mutumhe",
+      "Winnie Du",
+      "Modeste Gihozo Rukundo",
+      "Caleb Anagnos"
+    ]
+  }
+]

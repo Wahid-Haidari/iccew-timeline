@@ -1,0 +1,54 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Chloe Doiron",
+    "interns": [
+      "Sarah Yung",
+      "Benjamin Hill",
+      "Jeffrey Moseley",
+      "Jill Postic",
+      "Michael Wilkinson"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Oliver Li",
+    "interns": [
+      "Drew Cameron",
+      "Cale Curtin",
+      "Linzi Jiang",
+      "Renoj Varghese"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Scott Lowe and Rick O’hara",
+    "interns": [
+      "Richard Lu",
+      "Elizabeth Reynolds",
+      "Qing Zhao",
+      "Caroline Trump",
+      "Jared Rader",
+      "Ravi Teja Bellam",
+      "Nha Hoang",
+      "Tyler Nguyen"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Christella Chavez",
+      "Sarah Gray",
+      "Heather Vaughn"
+    ]
+  }
+]

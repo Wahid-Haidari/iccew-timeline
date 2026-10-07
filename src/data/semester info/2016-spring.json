@@ -1,0 +1,87 @@
+[
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "fellow": null,
+    "teamLead": "Nikita Hussain",
+    "interns": [
+      "Brett Fene",
+      "Ben Ignac",
+      "Lexi Jovanovic",
+      "Chisom Ibekwe"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Bailey Wilton",
+    "interns": [
+      "Blake Tinkle",
+      "Nelisiwe Mtembu",
+      "Brent Janss",
+      "Christna Wu"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Briek Pauwels",
+    "interns": [
+      "Robert Bellafiore",
+      "Angela Chang",
+      "Dalton Kern",
+      "Q Nguyen",
+      "Min Xiao"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Patrick Richardson",
+    "interns": [
+      "Bryan Capps",
+      "Yi Guo",
+      "Jake Manning",
+      "Dalton Wood"
+    ]
+  },
+  {
+    "id": "ca",
+    "name": "CA",
+    "fellow": null,
+    "teamLead": "Stefan Johanson",
+    "interns": [
+      "Amanda Ahadizadeh",
+      "Sean Templemore-Finlayson",
+      "Amanah Fatima",
+      "Michael Rath"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Mckenna Beard",
+    "interns": [
+      "Tonci Maleta",
+      "Trenton Hamm",
+      "Evan White",
+      "David Doshier"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Daniel Sperle",
+    "interns": [
+      "Benhail Muthyala",
+      "Annie Pham",
+      "Ronald Smith",
+      "Piper Wolfe"
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "tech-commercialization",
+    "name": "Tech Commercialization",
+    "fellow": null,
+    "teamLead": "Angela Chang",
+    "interns": [
+      "Jamie Franzese",
+      "Josh Imbriani",
+      "Hayden Padgett",
+      "Landon Wright"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Bailey Wilton",
+    "interns": [
+      "Harrison House",
+      "Kendon McGehee",
+      "Carly Norwood"
+    ]
+  },
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "fellow": null,
+    "teamLead": "Amanda Ahadizadeh",
+    "interns": [
+      "Maricela Avila",
+      "Sean Christiansen",
+      "Alexander Stubblefield"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Sean Templemore-Finlayson",
+    "interns": [
+      "Rijutha Garimella",
+      "Andrew Moore",
+      "Suparshva Parikh",
+      "Sarah Whitney",
+      "Brian Neldon",
+      "Sam Baskin",
+      "Kevin Gaffney",
+      "Bailey Hollingsworth",
+      "Charlie Liu"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Stephanie Vo",
+    "interns": [
+      "Matthew Allan",
+      "Courtney Duckett",
+      "Joan Kirungi",
+      "Mario Perez",
+      "Stephanie Prado"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Piper Wolfe",
+    "interns": [
+      "Morgan Gilsinger",
+      "Umair Hashmi",
+      "Jennifer Lyn",
+      "Salome Pinto"
+    ]
+  }
+]

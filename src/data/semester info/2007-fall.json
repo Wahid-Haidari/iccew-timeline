@@ -1,0 +1,40 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Lindyn Kish",
+    "interns": [
+      "Blaine Pinard",
+      "Chas Gilmore",
+      "Tyler Ledlow",
+      "Amanda Rutherford",
+      "Travis Webb"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Justin Briggs",
+    "interns": [
+      "Felipe Armaza",
+      "Lauren Haller",
+      "Killian Naylor",
+      "Robbie Miller"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Valerie Myers",
+    "interns": [
+      "John Woodson",
+      "William Cunningham",
+      "Derek Perkins",
+      "Kim Saylor",
+      "Chris Shilling"
+    ]
+  }
+]

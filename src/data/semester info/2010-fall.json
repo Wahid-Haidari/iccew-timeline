@@ -1,0 +1,42 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Lucas Rice",
+    "interns": [
+      "Patrick Luong",
+      "Samantha Toth",
+      "Barry Conrad",
+      "Jay Kumar"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "TJ Moen",
+    "interns": [
+      "Jack Randolph",
+      "Daniel Bailey",
+      "Virginia Duke",
+      "Greg Gustafson",
+      "Frank Lezu",
+      "Sean Miller",
+      "Megan Gessouroun",
+      "Bryce Stubblefield"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Amy Goad",
+    "interns": [
+      "Christiaan Bester",
+      "Ashley Zumwalt",
+      "Cole Roberts",
+      "Ali Khalili"
+    ]
+  }
+]

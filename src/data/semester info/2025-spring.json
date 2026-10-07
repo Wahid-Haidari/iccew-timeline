@@ -1,0 +1,64 @@
+[
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Tadiwa Mugwadi",
+    "interns": [
+      "Mohamed Abdelnaby",
+      "Daniel Esambu",
+      "Hunter Mena",
+      "Hunter Merrill",
+      "Tyler Vuong"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Anany Gupta",
+    "interns": [
+      "Tanaka Mutumhe",
+      "Ally Khrais",
+      "Winnie Du",
+      "Farzana Tasnim"
+    ]
+  },
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "fellow": null,
+    "teamLead": "Baylor Savage",
+    "interns": [
+      "Vanessa Soric Dodig",
+      "Benilson Sebastiao",
+      "Caleb Anagnos",
+      "Chanel Karungi",
+      "Andipanyasha Mutevedzi"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Peter Amprako",
+    "interns": [
+      "Hilbi Nadeem Akbar",
+      "Modeste Gihozo Rukundo",
+      "Deepak Jha",
+      "Anitah Namutebi"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Madison Milan",
+    "interns": [
+      "Christy Culp",
+      "Mike Dai Liangzhi",
+      "Anna Faakye",
+      "Michael Simic"
+    ]
+  }
+]

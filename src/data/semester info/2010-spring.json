@@ -1,0 +1,39 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Taylor Potter",
+    "interns": [
+      "Scott Lowe",
+      "Mimi Nguyen",
+      "John Reid",
+      "Ryan O’Meilia"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Ben West",
+    "interns": [
+      "Chase Roberts",
+      "Rouzhou Liao",
+      "Madison Limbacher",
+      "Andrew Morris"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Holly Sturdivan",
+    "interns": [
+      "Dana Mohammad-Z.",
+      "Julie Nguyen",
+      "William Prueitt",
+      "Amy Goad",
+      "Jeffrey Stewart"
+    ]
+  }
+]

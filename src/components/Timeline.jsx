@@ -38,7 +38,9 @@ function programsForSemester(semester) {
     (program) => !pinnedProgramIds.includes(program.id),
   )
 
-  return [...pinnedPrograms, ...otherPrograms]
+  return pinnedPrograms.some(Boolean)
+    ? [...pinnedPrograms, ...otherPrograms]
+    : otherPrograms
 }
 
 function createLine(source, target, containerRect, id) {
@@ -92,7 +94,7 @@ function getPromotionLines(container, semesters, includeLeadershipLines) {
     const sourceSemester = getMostRecentSemester(
       semesters,
       semesterIndex,
-      (program) => program.interns.includes(teamLead.dataset.teamLead),
+      (program) => program.interns?.includes(teamLead.dataset.teamLead),
     )
 
     if (!sourceSemester) {

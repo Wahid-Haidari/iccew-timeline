@@ -1,0 +1,63 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Sam Parrill",
+    "interns": [
+      "Byron Dale",
+      "Dillon Carroll",
+      "Ali Browning",
+      "Carl Szmutko"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Joel Maupin and Susan Moring",
+    "interns": [
+      "Ryan Phillips",
+      "Eleanor Burg",
+      "J.C. Fischer",
+      "Zachary Burgess",
+      "Austin Kipp",
+      "Ali Hajimirza",
+      "Alyssa Boutelle",
+      "Siddhartha V."
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Jeff Rhea",
+    "interns": [
+      "Kevin Hadley",
+      "Jamie Huber",
+      "Alex Reisner",
+      "Sarah Shapiro"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Aniruddha Agharkar",
+    "interns": [
+      "Nikhita Guntar",
+      "Lauren McKinney",
+      "Vishal Gadiya"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Madeleine Ratcliffe",
+      "Tim Johnson"
+    ]
+  }
+]

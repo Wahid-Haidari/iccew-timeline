@@ -1,0 +1,62 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Oliver Li",
+    "interns": [
+      "Nick Aguilera",
+      "Alex Eggleston",
+      "Sam Stringer",
+      "Daniel Meschter"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Julie Bock",
+    "interns": [
+      "Melissa Dang",
+      "Kirke Suter",
+      "Adam Avoian",
+      "Hannah Kellogg"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Carl Szmutko and Ryan Phillips",
+    "interns": [
+      "Lingzhou Lu",
+      "Nick Ortiz",
+      "Nikhil Mutalik",
+      "Andrew Tierney",
+      "Lauren Gilbert",
+      "Robert Byrd"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Lauren McKinney",
+    "interns": [
+      "Kristin Messerli",
+      "Lauren Wells",
+      "Adenike Adewolu"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Madeleine Ratcliffe and Tim Johnson",
+    "interns": [
+      "Julius Shen",
+      "Stephen Allred",
+      "Lauren Abston"
+    ]
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Krishna Manohar",
+    "interns": [
+      "Brad Morrow",
+      "Derrick Nguyen",
+      "Drew Walther"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Joseph Asante and Cici Zhou",
+    "interns": [
+      "Joseph Daniels",
+      "Khaled Jabr",
+      "Stefan Johanson",
+      "Jessica Murphree",
+      "Brian Neldon",
+      "Daniel Moses",
+      "Kimberly Ughamadu",
+      "Patrick Richardson"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Cooper Lund",
+    "interns": [
+      "Briek Pauwels",
+      "Archaela Jordan",
+      "Savannah Ames",
+      "Hailey Powell"
+    ]
+  },
+  {
+    "id": "team-4",
+    "name": "Team 4",
+    "fellow": null,
+    "teamLead": "Lena Erickson",
+    "interns": [
+      "Alexander Van Noord",
+      "Alexandra Smith",
+      "Stephanie Vo",
+      "Jack Dastugue"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Paul Abbey",
+    "interns": [
+      "Cassie Holmes",
+      "Alyssa Peterson",
+      "Daniel Sperle"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Eli Weathers",
+    "interns": [
+      "Holly Crawford",
+      "Joshua Franzen",
+      "Bailey Wilton",
+      "Maya Sykes"
+    ]
+  }
+]

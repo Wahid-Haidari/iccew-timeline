@@ -1,0 +1,35 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Blake Trippet",
+    "interns": [
+      "Austin Slaymaker",
+      "Lucas Rice",
+      "Yunfei Li"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Brittany Ryan",
+    "interns": [
+      "Taylor Potter",
+      "TJ Moen",
+      "Ben West"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Samantha Ali",
+    "interns": [
+      "Tobi Olusola",
+      "Vinh Pham",
+      "Holly Sturdivan"
+    ]
+  }
+]

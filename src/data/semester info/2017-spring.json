@@ -1,0 +1,86 @@
+[
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "fellow": null,
+    "teamLead": "Michael Rath",
+    "interns": [
+      "Mculu Dlamini",
+      "Ivey Dyson",
+      "Trae Havens",
+      "Stella Huynh"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Holly Crawford",
+    "interns": [
+      "Samuel Bagaason",
+      "Clayton Bradshaw",
+      "Matthew Mullins",
+      "Daniel O'Conner"
+    ]
+  },
+  {
+    "id": "ca",
+    "name": "CA",
+    "fellow": null,
+    "teamLead": "Hayden Padgett",
+    "interns": [
+      "Alec Armer",
+      "Grace Bouziden",
+      "Juliana France",
+      "Connor Moore"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Joan Kirungi",
+    "interns": [
+      "Miles Burnett",
+      "Joseph Dal Santo",
+      "Zach Schuermann",
+      "Trenton Turner"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Rijutha Garimella",
+    "interns": [
+      "Blake Saylor",
+      "Justin Potts",
+      "Husayn Ramji",
+      "EB McCready"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Bailey Hollingsworth",
+    "interns": [
+      "Nick Graham",
+      "Dragon Tran",
+      "Andrew Shaffer",
+      "Valerie Pham"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Jennifer Lynn",
+    "interns": [
+      "Kate Duethman",
+      "Varun Gupta",
+      "Vanessa Garcia",
+      "Jonathon Weber-Mendez"
+    ]
+  }
+]

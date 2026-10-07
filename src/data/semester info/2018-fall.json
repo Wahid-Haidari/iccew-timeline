@@ -1,0 +1,112 @@
+[
+  {
+    "id": "tech-commercialization",
+    "name": "Tech Commercialization",
+    "fellow": null,
+    "teamLead": "Jessica James",
+    "interns": [
+      "Greta Fiedler",
+      "Wendy Han",
+      "Axel DQMR",
+      "Wesley Zhang"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Jordan Burdick",
+    "interns": [
+      "Christa Holland",
+      "Orin Imtiaz",
+      "Temidepelayo Ojekunle"
+    ]
+  },
+  {
+    "id": "oil-and-gas",
+    "name": "Oil and Gas",
+    "fellow": null,
+    "teamLead": "Sheila Gerardo",
+    "interns": [
+      "Sergio Gomez",
+      "Andrea Inacio",
+      "John Roff",
+      "Shadi Salahshoor"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Moises Martinez",
+    "interns": [
+      "Ben Cooper",
+      "Alex Hayes",
+      "Ope Odejimi",
+      "Emily Sharp"
+    ]
+  },
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "fellow": null,
+    "teamLead": "Tami Alabi",
+    "interns": [
+      "Annie Coffey",
+      "Kyle Fronckiewics",
+      "Sona Nuguri",
+      "Aaron Snodell"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Calla Hamlin",
+    "interns": [
+      "Austin Coffey",
+      "Tony Efoli",
+      "Crystal Gillette",
+      "Sebastian Tippett"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Cody Degner",
+    "interns": [
+      "Emma Greene",
+      "Mengrui Luo",
+      "Naveen Kumar Penki",
+      "Timo Sheridan",
+      "Delano Usiukiewicz",
+      "Richard Yang"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Dan Sloat and Rachel Davis",
+    "interns": [
+      "Hannah Bladen",
+      "Kaitlin Lutz",
+      "Jourdan Srouji",
+      "Reid Grimes",
+      "Catherine Hyland",
+      "Lindey Nguyen"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Abbey Marino",
+    "interns": [
+      "Kara Howse",
+      "Kelsey Ladenburger",
+      "Katie Urey-Wing"
+    ]
+  }
+]

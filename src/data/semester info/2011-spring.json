@@ -1,0 +1,41 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Samantha Toth",
+    "interns": [
+      "Dawit Dagnaw",
+      "Anoopdeep Bal",
+      "Oliver Li",
+      "Erin Summersgill",
+      "Sam Clancy"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Mimi Nguyen",
+    "interns": [
+      "Reneé Selanders",
+      "Kelsey Johnson",
+      "David Rice",
+      "Allen Smith",
+      "Yemi Harris",
+      "Kelly Tran"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Ashley Zumwalt",
+    "interns": [
+      "Rachel O’Connor",
+      "Brett Bone",
+      "Blake Burget",
+      "Alexandra Valiton"
+    ]
+  }
+]

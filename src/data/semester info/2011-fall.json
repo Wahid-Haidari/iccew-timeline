@@ -1,0 +1,57 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Dana Mohammad-Z.",
+    "interns": [
+      "Jerod Coker",
+      "Chloe Doiron",
+      "Carson Rock",
+      "Samantha Wong"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Barry Conrad",
+    "interns": [
+      "Caitlin Cadieux",
+      "Evan Defillipis",
+      "Calvin Nelms",
+      "Josh Holmes",
+      "Susana Rodriguez",
+      "Dhara Sheth",
+      "Kris Smith",
+      "Mary Hestilow",
+      "Robert Free"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Jay Kumar",
+    "interns": [
+      "Niki Bray",
+      "Zach Mason",
+      "Evan Fry",
+      "Andi Atkin"
+    ]
+  },
+  {
+    "id": "team-4",
+    "name": "Team 4",
+    "fellow": null,
+    "teamLead": "Reneé Selanders",
+    "interns": [
+      "Rick O’hara",
+      "Jakob Griffith",
+      "Nicholas Kovash",
+      "Andrew Nguyen",
+      "Adam Ghodratnama",
+      "Taras Basiuk"
+    ]
+  }
+]

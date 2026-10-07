@@ -1,16 +1,22 @@
-import spring2020 from './semester info/spring-2020.json'
-import summer2020 from './semester info/summer-2020.json'
-import fall2020 from './semester info/fall-2020.json'
-import spring2021 from './semester info/spring-2021.json'
-import summer2021 from './semester info/summer-2021.json'
-import fall2021 from './semester info/fall-2021.json'
-import spring2022 from './semester info/spring-2022.json'
-import summer2022 from './semester info/summer-2022.json'
-import fall2022 from './semester info/fall-2022.json'
-import spring2023 from './semester info/spring-2023.json'
-import fall2023 from './semester info/fall-2023.json'
+import fall2006 from './semester info/2006-fall.json'
+import spring2007 from './semester info/2007-spring.json'
+import fall2007 from './semester info/2007-fall.json'
+import spring2020 from './semester info/2020-spring.json'
+import summer2020 from './semester info/2020-summer.json'
+import fall2020 from './semester info/2020-fall.json'
+import spring2021 from './semester info/2021-spring.json'
+import summer2021 from './semester info/2021-summer.json'
+import fall2021 from './semester info/2021-fall.json'
+import spring2022 from './semester info/2022-spring.json'
+import summer2022 from './semester info/2022-summer.json'
+import fall2022 from './semester info/2022-fall.json'
+import spring2023 from './semester info/2023-spring.json'
+import fall2023 from './semester info/2023-fall.json'
 
 export const timeline = [
+  { id: 'fall-2006', label: 'Fall 2006', programs: fall2006 },
+  { id: 'spring-2007', label: 'Spring 2007', programs: spring2007 },
+  { id: 'fall-2007', label: 'Fall 2007', programs: fall2007 },
   { id: 'spring-2020', label: 'Spring 2020', programs: spring2020 },
   { id: 'summer-2020', label: 'Summer 2020', programs: summer2020 },
   { id: 'fall-2020', label: 'Fall 2020', programs: fall2020 },

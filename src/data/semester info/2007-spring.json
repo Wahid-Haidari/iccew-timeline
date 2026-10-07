@@ -1,0 +1,37 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Rob Kish and Ben Stewart",
+    "interns": [
+      "Tyler Mosmeyer",
+      "Eddie Coates",
+      "Jean Carlos Lopez"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Ryan Smith and Mariana Barrientos",
+    "interns": [
+      "Jay Doyle",
+      "Brendan Quick",
+      "Lindyn Kish",
+      "Brian Van Schoyck"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Sasha Down",
+    "interns": [
+      "Justin Briggs",
+      "Charles Bright",
+      "Valerie Myers",
+      "Bobby Lepak"
+    ]
+  }
+]

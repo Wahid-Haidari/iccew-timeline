@@ -1,0 +1,93 @@
+[
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Jamshed Karimnazarov",
+    "interns": [
+      "Ameer Ghazal",
+      "Kristiana Karshelieva",
+      "Blake Lee",
+      "Emma Stubby",
+      "Daniel Yowell"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Caitlin Cotteleer",
+    "interns": [
+      "Wesley Bruce",
+      "Gavin Nation",
+      "Efe Poyraz",
+      "Himanshu Atwal",
+      "Stephanie Uribe"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Jennifer Lubwama",
+    "interns": [
+      "Muriel Kroflin",
+      "Chris Ortiz",
+      "Kaile Mulimba",
+      "Roshan Rai"
+    ]
+  },
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "fellow": null,
+    "teamLead": "Sunny Wickramasinghe",
+    "interns": [
+      "Pierce Hudgens",
+      "Sofia Torres",
+      "Sanam Kumar",
+      "Samantha Hepburn"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Celine Polepole",
+    "interns": [
+      "Marjan Maro Zovko",
+      "Nifemi Bonou",
+      "Yvette Ingabire",
+      "Vera Muco"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Nishant Ahlawat and Martha Tsaliki",
+    "interns": [
+      "Michael Hauge",
+      "Kristina Soboleva",
+      "Adarsh Udassi",
+      "Eniola Adewunmi",
+      "Katherine Fox",
+      "Jake Dyke",
+      "Andrew Haskell"
+    ]
+  },
+  {
+    "id": "vc",
+    "name": "VC",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Abdulamid Fakoye",
+      "Demi Jooda",
+      "Justyna Lukczak",
+      "Tadiwa Mugwadi",
+      "Kingsley Uzogor",
+      "Blake Winchester"
+    ]
+  }
+]

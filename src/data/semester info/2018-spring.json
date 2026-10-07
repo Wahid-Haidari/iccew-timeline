@@ -1,0 +1,107 @@
+[
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "fellow": null,
+    "teamLead": "Haley Rader",
+    "interns": [
+      "Tyler Gatewood",
+      "Jessice James",
+      "Allecia Jones",
+      "Marija Primorac"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Timothy Sheridan",
+    "interns": [
+      "Jordan Burdick",
+      "Ryleigh Navert",
+      "Collin Owen",
+      "Samuel Quick"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Morgan Nash",
+    "interns": [
+      "Jordan D'Silva",
+      "Emma Greene",
+      "Molungoa Ramataboe",
+      "Tanner Satterthwaite"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Valeria Pham",
+    "interns": [
+      "Cody Degner",
+      "Michael Fedell",
+      "Wenhua Wang",
+      "Lihua Zhao"
+    ]
+  },
+  {
+    "id": "tech-commercialization",
+    "name": "Tech Commercialization",
+    "fellow": null,
+    "teamLead": "Robert Bellafiore",
+    "interns": [
+      "Christopher Carter",
+      "Christina Nguyen",
+      "Jack Sparks",
+      "Eunhee Tark"
+    ]
+  },
+  {
+    "id": "oil-and-gas",
+    "name": "Oil and Gas",
+    "fellow": null,
+    "teamLead": "Hayden Padgett",
+    "interns": [
+      "Saurabh Agarwal",
+      "Sheila Gerardo",
+      "Jackson Spencer"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Steffani Silva",
+    "interns": [
+      "Abigail Baukus",
+      "Moises Martinez",
+      "Orhan Roksa",
+      "Musa Sukati"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Benjamin Frempah",
+    "interns": [
+      "Regan Bolding",
+      "Rachel Davis",
+      "Mark Ray",
+      "Dan Sloat"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Emily Ingram",
+    "interns": [
+      "Beulah Adigun",
+      "Brittany Wheeler"
+    ]
+  }
+]

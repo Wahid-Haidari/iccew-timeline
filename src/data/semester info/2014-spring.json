@@ -1,0 +1,81 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Sarah Yung",
+    "interns": [
+      "Jeremy Littel",
+      "Meghan Saunders",
+      "William Lonn",
+      "Nathan Robertson",
+      "Egawati Panjet",
+      "Jillian Taylor",
+      "Jeffrey Terry",
+      "Luke Tucker",
+      "Shelby Vanhooser",
+      "Nick Sparks",
+      "Matthew Stangl"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Hannah Kellogg",
+    "interns": [
+      "Jeff Bissinger",
+      "David Driskill",
+      "Lucy Mahaffey",
+      "Devon Triebold"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Dillon Carroll",
+    "interns": [
+      "Andrew Stewart",
+      "Ethan van Meter",
+      "Michael Petri"
+    ]
+  },
+  {
+    "id": "team-4",
+    "name": "Team 4",
+    "fellow": null,
+    "teamLead": "Sarah Shapiro",
+    "interns": [
+      "Bryce Hermsen",
+      "Cole Jackson",
+      "Tahira Taqi",
+      "John Warden"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Kristin Messerli",
+    "interns": [
+      "Allie Grantham",
+      "Wagnon Rhonda",
+      "Sivakumar Sai",
+      "Carissa Curtis",
+      "Melissa Kunz",
+      "Prasad Kuppurangan"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Lauren Abston",
+    "interns": [
+      "Stephen Elias",
+      "Frank Frantz",
+      "Rita Rush"
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Michael Asanta",
+    "interns": [
+      "Asmita Baruah",
+      "Alyssa Campbell",
+      "Miguel Payan",
+      "Ermin Kervic",
+      "Wendy Han"
+    ]
+  },
+  {
+    "id": "ca",
+    "name": "CA",
+    "fellow": null,
+    "teamLead": "Sebastian Tippett",
+    "interns": [
+      "Emily Black",
+      "Zainab Sandhu",
+      "Alex Parsells",
+      "Richard Holt"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Keith Nutter",
+    "interns": [
+      "Eva Sparks",
+      "Cale Powers",
+      "Leo Chiu",
+      "Austin Parker"
+    ]
+  },
+  {
+    "id": "oil-and-gas",
+    "name": "Oil and Gas",
+    "fellow": null,
+    "teamLead": "Haley Rader",
+    "interns": [
+      "Eddy Alfaro Cordoba",
+      "Kendall Prather",
+      "Dean Goodrich"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Emma Greene",
+    "interns": [
+      "Pranoy Behera",
+      "Kaylee Kimbrough",
+      "Minori Matsuzawa",
+      "Paula Tran"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Alan Lee",
+    "interns": [
+      "Srisima Kondapaneni",
+      "Chan Lakamsani",
+      "Shiqiao Wang",
+      "Anna Young"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Souwelimatou Amadou Amani",
+    "interns": [
+      "Atul Abraham Muttencherry",
+      "Trevor Shofner",
+      "Younes Rebbaj"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Frank Whittier",
+    "interns": [
+      "Whitney Cipolla",
+      "Charles John",
+      "Sherrie Sherrick",
+      "Brittanie Whitney"
+    ]
+  }
+]

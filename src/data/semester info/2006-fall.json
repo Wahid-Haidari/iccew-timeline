@@ -1,0 +1,55 @@
+[
+  {
+    "id": "staff",
+    "name": "Staff",
+    "location": "Norman",
+    "members": [
+      {
+        "name": "Daniel Pullin",
+        "role": "Executive Director"
+      },
+      {
+        "name": "Caroline Cochran",
+        "role": "Program Manager"
+      }
+    ]
+  },
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "location": "Norman",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Jaclyn Stelzer",
+      "Marjorie Guy",
+      "Blake Mcguire",
+      "Rob Kish"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "location": "Norman",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Ben Stewart",
+      "Ryan Smith",
+      "Mariana Barrientos"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "location": "Norman",
+    "fellow": null,
+    "teamLead": null,
+    "interns": [
+      "Lindsey Waddell",
+      "Joseph Wohleber",
+      "Sasha Down",
+      "Andy Hill"
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Chas Gilmore",
+    "interns": [
+      "Tracy Cline",
+      "Matt Colwell",
+      "Stafford Marquardt",
+      "Barron Ryan"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "John Woodson",
+    "interns": [
+      "Juan Diego Alonso",
+      "Ben Ikard",
+      "Jennifer Johnson"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "William Cunningham",
+    "interns": [
+      "David Luu",
+      "Kris Vermelis",
+      "Jared Weingartner",
+      "Ginger Wells"
+    ]
+  }
+]

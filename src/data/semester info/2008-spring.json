@@ -1,0 +1,39 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Blaine Pinard",
+    "interns": [
+      "Tyler Bolton",
+      "Laleh Chafi",
+      "Michael Linville",
+      "Steven Watts"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Travis Webb",
+    "interns": [
+      "Sam Galoob",
+      "Amber Edwards",
+      "Julie Fugate",
+      "Adam Croom",
+      "Matt Brown"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Chris Shilling",
+    "interns": [
+      "Kristin Barnett",
+      "Michael Harrison",
+      "Robert Hefner",
+      "Michael Sarchet"
+    ]
+  }
+]

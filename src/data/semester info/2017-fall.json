@@ -1,0 +1,99 @@
+[
+  {
+    "id": "social-entrepreneurship",
+    "name": "Social Entrepreneurship",
+    "fellow": null,
+    "teamLead": "Trae Havens",
+    "interns": [
+      "Tami Alabi",
+      "Hannah Grillot",
+      "Haley Rader",
+      "Mattie Witman"
+    ]
+  },
+  {
+    "id": "ofa",
+    "name": "OFA",
+    "fellow": null,
+    "teamLead": "Carly Norwood",
+    "interns": [
+      "Jarrett Ferguson",
+      "Taylor Finley",
+      "Calla Hamlin",
+      "Timothy Sheridan"
+    ]
+  },
+  {
+    "id": "soba-business",
+    "name": "SoBA (Business)",
+    "fellow": null,
+    "teamLead": "Alec Armer",
+    "interns": [
+      "Lane Callaghan",
+      "Antonella Carranco",
+      "Daniela Cooper",
+      "Steffani Silva",
+      "Vesela Massaro"
+    ]
+  },
+  {
+    "id": "soba-developer",
+    "name": "SoBA (Developer)",
+    "fellow": null,
+    "teamLead": "Kimberly Ughamadu",
+    "interns": [
+      "Qiang Pan",
+      "Justin Potts",
+      "Catherine Ha",
+      "Simon Zu"
+    ]
+  },
+  {
+    "id": "ca",
+    "name": "CA",
+    "fellow": null,
+    "teamLead": "Jamie Franzese",
+    "interns": [
+      "Elizabeth Greer",
+      "Morgan Nash",
+      "Rahma Osman",
+      "Soham Pandya"
+    ]
+  },
+  {
+    "id": "agile-product-design",
+    "name": "Agile Product Design",
+    "fellow": null,
+    "teamLead": "Matthew Allan",
+    "interns": [
+      "Lindsey Cox",
+      "Grace Le",
+      "Qianny Lu",
+      "Shepherd Matsongoni",
+      "Douglas Yancy"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Varun Gupta",
+    "interns": [
+      "Shruti Bothe",
+      "Emily Ingram",
+      "Amanda Maxwell"
+    ]
+  },
+  {
+    "id": "okc",
+    "name": "OKC",
+    "fellow": null,
+    "teamLead": "Krishna Manohar",
+    "interns": [
+      "Sean Eldridge",
+      "Benjamin Frempah",
+      "Jimmy Manyanga",
+      "Betsy Waller"
+    ]
+  }
+]

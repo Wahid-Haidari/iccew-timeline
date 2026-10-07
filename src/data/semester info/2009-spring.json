@@ -1,0 +1,38 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Sam Galoob",
+    "interns": [
+      "Lindsay Smith",
+      "Austin Spires",
+      "Blake Trippet",
+      "Han Wang"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Matt Colwell",
+    "interns": [
+      "Derek Case",
+      "Hamid Pezeshkian",
+      "John Rodgers",
+      "Brittany Ryan"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Stafford Marquardt",
+    "interns": [
+      "Oluwatobi Aborisade",
+      "John Gawey",
+      "Jessica Haffener",
+      "Samantha Ali"
+    ]
+  }
+]

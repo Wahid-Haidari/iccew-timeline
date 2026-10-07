@@ -1,0 +1,56 @@
+[
+  {
+    "id": "team-1",
+    "name": "Team 1",
+    "fellow": null,
+    "teamLead": "Samantha Wong",
+    "interns": [
+      "Julie Bock",
+      "Allie Kallmann",
+      "Sam Parrill",
+      "Andrew Belliveau"
+    ]
+  },
+  {
+    "id": "team-2",
+    "name": "Team 2",
+    "fellow": null,
+    "teamLead": "Josh Holmes and Caroline Trump",
+    "interns": [
+      "Muralikrishna Dulla",
+      "Mahesh Kagitha",
+      "Joel Maupin",
+      "Parker Dooly",
+      "Susan Moring",
+      "Zach McWilliams",
+      "Chris Larberg",
+      "Tiffany Haendel",
+      "Mubeen Shakir",
+      "Jeff Rhea"
+    ]
+  },
+  {
+    "id": "team-3",
+    "name": "Team 3",
+    "fellow": null,
+    "teamLead": "Evan Fry",
+    "interns": [
+      "Charlotte Lunday",
+      "Dan Phillips",
+      "Rebecca Stevenson",
+      "Tyler Pearson"
+    ]
+  },
+  {
+    "id": "tulsa",
+    "name": "Tulsa",
+    "fellow": null,
+    "teamLead": "Sarah Gray",
+    "interns": [
+      "Heather Odle",
+      "Bhagyashri Darunkar",
+      "Aniruddha Agharkar",
+      "Kris Iyer"
+    ]
+  }
+]
