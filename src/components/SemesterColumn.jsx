@@ -4,12 +4,12 @@ export default function SemesterColumn({ semester }) {
   return (
     <div className="flex shrink-0 flex-col items-center" style={{ minWidth: 220 }}>
       {/* Label */}
-      <span className="mb-2 text-sm font-semibold text-emerald-400">
+      <span className="mb-2 text-sm font-semibold text-[#841617]">
         {semester.label}
       </span>
 
       {/* Dashed connector */}
-      <div className="h-6 border-l-2 border-dashed border-slate-500" />
+      <div className="h-6 border-l-2 border-dashed border-[#841617]/45" />
 
       {/* Dot on the timeline (positioned by parent) */}
 

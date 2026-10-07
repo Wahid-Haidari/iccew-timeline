@@ -73,7 +73,7 @@ export async function loadTimelineFromSupabase() {
   const [semesters, groups, people, projects, memberships] = await Promise.all([
     fetchAllRows("semesters", "id, year, term"),
 
-    fetchAllRows("groups", "id, semester_id, name, location, is_staff, group_type"),
+    fetchAllRows("groups", "id, semester_id, name, location, is_staff, group_type, display_order"),
 
     fetchAllRows("people", "id, full_name"),
 
@@ -129,6 +129,7 @@ export async function loadTimelineFromSupabase() {
           name: person?.full_name ?? "Unknown",
           role: membership.role,
           location: membership.location,
+          projectId: membership.project_id,
           project: project?.name ?? null,
         };
       });
@@ -138,12 +139,15 @@ export async function loadTimelineFromSupabase() {
       if (isStaff) {
         return {
           id: makeProgramId(group.name),
+          groupId: group.id,
+          displayOrder: group.display_order,
           name: group.name,
           location: group.location,
           members: peopleInGroup.map((person) => ({
             name: person.name,
             role: person.role,
           })),
+          membershipDetails: peopleInGroup,
         };
       }
 
@@ -155,6 +159,8 @@ export async function loadTimelineFromSupabase() {
 
       return {
         id: makeProgramId(group.name),
+        groupId: group.id,
+        displayOrder: group.display_order,
         name: group.name,
         location: group.location,
 
@@ -168,13 +174,274 @@ export async function loadTimelineFromSupabase() {
         // multiple Fellows/TLs later.
         fellows,
         teamLeads,
+        membershipDetails: peopleInGroup,
       };
     });
 
     return {
       id: `${semester.term.toLowerCase()}-${semester.year}`,
+      // Keep the database id as well as the display id. The display id is
+      // convenient for the UI, while new groups must use the UUID stored in
+      // groups.semester_id.
+      databaseId: semester.id,
       label: `${semester.term} ${semester.year}`,
       programs,
     };
   });
+}
+
+export async function saveProgramToSupabase(program, changes) {
+  if (!program.groupId) {
+    throw new Error("This card is missing its group record.");
+  }
+
+  const { data: updatedGroups, error: groupError } = await supabase
+    .from("groups")
+    .update({
+      name: changes.name,
+      location: changes.location || null,
+    })
+    .eq("id", program.groupId)
+    .select("id");
+
+  if (groupError) {
+    throw new Error(`Could not save the card: ${groupError.message}`);
+  }
+
+  if (!updatedGroups?.length) {
+    throw new Error(
+      "The card was not updated. Supabase does not currently allow this browser to update group records.",
+    );
+  }
+
+  // A card-name or location edit does not need to rewrite the roster. This
+  // avoids requiring people and membership write access for simple card edits.
+  if (!changes.membersChanged) {
+    return;
+  }
+
+  const members = changes.members;
+  const memberNames = [...new Set(members.map((member) => member.name))];
+
+  const { error: deleteError } = await supabase
+    .from("memberships")
+    .delete()
+    .eq("group_id", program.groupId);
+
+  if (deleteError) {
+    throw new Error(`Could not update the card members: ${deleteError.message}`);
+  }
+
+  if (memberNames.length === 0) {
+    return;
+  }
+
+  const { data: savedPeople, error: peopleError } = await supabase
+    .from("people")
+    .upsert(
+      memberNames.map((full_name) => ({ full_name })),
+      { onConflict: "full_name" },
+    )
+    .select("id, full_name");
+
+  if (peopleError) {
+    throw new Error(`Could not save the people on this card: ${peopleError.message}`);
+  }
+
+  const peopleByName = new Map(
+    savedPeople.map((person) => [person.full_name, person.id]),
+  );
+  const previousMemberships = program.membershipDetails ?? [];
+  const memberships = members.map((member) => {
+    const existingMembership = previousMemberships.find(
+      (previous) => previous.name === member.name && previous.role === member.role,
+    );
+
+    return {
+      group_id: program.groupId,
+      person_id: peopleByName.get(member.name),
+      role: member.role,
+      project_id: existingMembership?.projectId ?? null,
+      location: existingMembership?.location ?? null,
+    };
+  });
+
+  const { error: membershipError } = await supabase
+    .from("memberships")
+    .insert(memberships);
+
+  if (membershipError) {
+    throw new Error(`Could not save the card members: ${membershipError.message}`);
+  }
+}
+
+export async function deleteProgramFromSupabase(program) {
+  if (!program.groupId) {
+    throw new Error("This card is missing its group record.");
+  }
+
+  const deleteGroup = () => supabase
+    .from("groups")
+    .delete()
+    .eq("id", program.groupId)
+    .select("id");
+
+  let { data: deletedGroups, error: groupError } = await deleteGroup();
+
+  if (!groupError && !deletedGroups?.length) {
+    throw new Error(
+      "The card was not deleted. Supabase does not currently allow this browser to delete group records.",
+    );
+  }
+
+  // If the database requires memberships and projects to be removed first,
+  // clear those dependent records and retry the group deletion.
+  if (groupError?.code === "23503") {
+    const { error: membershipError } = await supabase
+      .from("memberships")
+      .delete()
+      .eq("group_id", program.groupId);
+
+    if (membershipError) {
+      throw new Error(`Could not remove the card members: ${membershipError.message}`);
+    }
+
+    const { error: projectError } = await supabase
+      .from("projects")
+      .delete()
+      .eq("group_id", program.groupId);
+
+    if (projectError) {
+      throw new Error(`Could not remove the card projects: ${projectError.message}`);
+    }
+
+    ({ data: deletedGroups, error: groupError } = await deleteGroup());
+  }
+
+  if (groupError) {
+    throw new Error(`Could not remove the card: ${groupError.message}`);
+  }
+
+  if (!deletedGroups?.length) {
+    throw new Error("The card could not be found to delete.");
+  }
+
+  // Most schemas cascade these records when the group is deleted. If this
+  // project uses non-cascading foreign keys, they were removed before retrying.
+  await supabase
+    .from("memberships")
+    .delete()
+    .eq("group_id", program.groupId);
+  await supabase.from("projects").delete().eq("group_id", program.groupId);
+}
+
+export async function saveProgramOrder(programs) {
+  const results = await Promise.all(programs.map(async (program, displayOrder) => {
+    if (!program.groupId) {
+      throw new Error("A reordered card is missing its group record.");
+    }
+
+    const { data, error } = await supabase
+      .from("groups")
+      .update({ display_order: displayOrder })
+      .eq("id", program.groupId)
+      .select("id");
+
+    if (error) {
+      throw new Error(`Could not save the card order: ${error.message}`);
+    }
+
+    if (!data?.length) {
+      throw new Error(
+        "The card order was not saved. Supabase does not currently allow this browser to update group records.",
+      );
+    }
+
+    return data[0];
+  }));
+
+  return results;
+}
+
+export async function createProgramInSupabase(semesterId, changes) {
+  if (!semesterId) {
+    throw new Error("Please choose a semester for the new team.");
+  }
+
+  const name = changes.name?.trim();
+
+  if (!name) {
+    throw new Error("Please enter a team name.");
+  }
+
+  const { data: createdGroups, error: groupError } = await supabase
+    .from("groups")
+    .insert({
+      semester_id: semesterId,
+      name,
+      location: changes.location?.trim() || null,
+      is_staff: false,
+      group_type: null,
+      // Keep this null for semesters that have never been manually ordered.
+      // For ordered semesters, App supplies the next position so the new card
+      // appears at the end until it is dragged elsewhere.
+      display_order: changes.displayOrder ?? null,
+    })
+    .select("id");
+
+  if (groupError) {
+    if (groupError.code === "23505") {
+      throw new Error("A team with this name already exists in that semester.");
+    }
+
+    throw new Error(`Could not create the team: ${groupError.message}`);
+  }
+
+  const group = createdGroups?.[0];
+
+  if (!group) {
+    throw new Error(
+      "The team was not created. Supabase does not currently allow this browser to add group records.",
+    );
+  }
+
+  const members = (changes.members ?? []).filter((member) => member.name?.trim());
+
+  if (members.length === 0) {
+    return group;
+  }
+
+  const memberNames = [...new Set(members.map((member) => member.name.trim()))];
+  const { data: savedPeople, error: peopleError } = await supabase
+    .from("people")
+    .upsert(
+      memberNames.map((full_name) => ({ full_name })),
+      { onConflict: "full_name" },
+    )
+    .select("id, full_name");
+
+  if (peopleError) {
+    throw new Error(`Could not save the people on this team: ${peopleError.message}`);
+  }
+
+  const peopleByName = new Map(
+    savedPeople.map((person) => [person.full_name, person.id]),
+  );
+  const memberships = members.map((member) => ({
+    group_id: group.id,
+    person_id: peopleByName.get(member.name.trim()),
+    role: member.role,
+    project_id: null,
+    location: null,
+  }));
+
+  const { error: membershipError } = await supabase
+    .from("memberships")
+    .insert(memberships);
+
+  if (membershipError) {
+    throw new Error(`Could not save the team members: ${membershipError.message}`);
+  }
+
+  return group;
 }

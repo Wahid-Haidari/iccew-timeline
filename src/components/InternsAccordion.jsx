@@ -7,6 +7,7 @@ export default function InternsAccordion({
   semesterId,
   open,
   onToggle,
+  buttonColor = 'bg-[#f0f0f0] hover:bg-[#f6e9cf]',
 }) {
   const [localOpen, setLocalOpen] = useState(false)
   const isControlled = typeof open === 'boolean'
@@ -26,10 +27,10 @@ export default function InternsAccordion({
     <div>
       <button
         onClick={handleToggle}
-        className="flex w-full items-center justify-between rounded-md bg-white/10 px-3 py-1.5 text-sm font-medium text-white hover:bg-white/15 transition-colors"
+        className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-sm font-medium text-[#323232] transition-colors ${buttonColor}`}
       >
         <span>
-          {label} <span className="ml-1 text-emerald-400">{people.length}</span>
+          {label} <span className="ml-1 text-[#841617]">{people.length}</span>
         </span>
         <svg
           className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
@@ -43,7 +44,7 @@ export default function InternsAccordion({
       </button>
 
       {isOpen && (
-        <ul className="mt-2 space-y-1 text-sm text-slate-200">
+        <ul className="mt-2 space-y-1 text-sm text-[#323232]">
           {people.map((person) => {
             const member = typeof person === 'string' ? { name: person } : person
 
@@ -58,11 +59,11 @@ export default function InternsAccordion({
                   : {})}
                 className="flex items-start gap-2"
               >
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#841617]" />
                 <span>
                   {member.name}
                   {member.role && (
-                    <span className="ml-1 text-slate-400">— {member.role}</span>
+                    <span className="ml-1 text-[#5a5a5a]">— {member.role}</span>
                   )}
                 </span>
               </li>
