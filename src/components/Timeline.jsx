@@ -7,6 +7,8 @@ const pinnedProgramIds = [
   'energy',
   'ofa',
   'okc',
+  'okc-ultra-botanica',
+  'okc-drug-delivery',
   'okc-fizit',
   'okc-summoxone',
   'soba-biz',

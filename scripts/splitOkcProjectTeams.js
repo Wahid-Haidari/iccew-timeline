@@ -20,6 +20,14 @@ const configurations = {
       { name: 'OKC (OU Med)', projectName: 'OU Med' },
     ],
   },
+  'fall-2018': {
+    year: 2018,
+    term: 'Fall',
+    teams: [
+      { name: 'OKC (Ultra Botanica)', projectName: 'Ultra Botanica' },
+      { name: 'OKC (Drug Delivery)', projectName: 'Drug Delivery' },
+    ],
+  },
 }
 const configurationKey = process.argv.find((argument) => argument.startsWith('--semester='))
   ?.slice('--semester='.length)
