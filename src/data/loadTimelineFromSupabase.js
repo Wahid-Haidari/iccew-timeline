@@ -9,6 +9,7 @@ const termOrder = {
 const specialProgramIds = {
   Staff: "staff",
   APD: "apd",
+  "Agile Product Design": "apd",
   Energy: "energy",
   OFA: "ofa",
   OKC: "okc",
@@ -153,22 +154,37 @@ export async function loadTimelineFromSupabase() {
 
       const interns = peopleInGroup.filter((person) => person.role.toLowerCase() === "intern").map((person) => person.name);
 
+      const participants = peopleInGroup.filter((person) => person.role.toLowerCase() === "participant").map((person) => person.name);
+
       const teamLeads = peopleInGroup.filter((person) => person.role.toLowerCase() === "team lead").map((person) => person.name);
 
       const fellows = peopleInGroup.filter((person) => person.role.toLowerCase() === "fellow").map((person) => person.name);
 
+      const projectNames = [...new Set(
+        peopleInGroup
+          .map((person) => person.project)
+          .filter(Boolean),
+      )];
+
       return {
         id: makeProgramId(group.name),
         groupId: group.id,
+        groupType: group.group_type,
         displayOrder: group.display_order,
         name: group.name,
         location: group.location,
+
+        project: projectNames.join(", ") || null,
+
+        peopleLabel: participants.length > 0 ? "Participants" : "Interns",
+        peopleRole: participants.length > 0 ? "Participant" : "Intern",
 
         fellow: fellows[0] ?? null,
 
         teamLead: teamLeads[0] ?? null,
 
-        interns,
+        interns: [...interns, ...participants],
+        lineageInterns: interns,
 
         // Keep these too so we can support
         // multiple Fellows/TLs later.

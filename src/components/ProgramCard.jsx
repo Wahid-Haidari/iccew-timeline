@@ -7,6 +7,8 @@ const colorMap = {
   energy: 'border-emerald-600 bg-emerald-50',
   ofa: 'border-amber-500 bg-amber-50',
   okc: 'border-orange-500 bg-orange-50',
+  'okc-fizit': 'border-orange-500 bg-orange-50',
+  'okc-summoxone': 'border-orange-500 bg-orange-50',
   'okc-talento': 'border-orange-500 bg-orange-50',
   'okc-ou-med': 'border-orange-500 bg-orange-50',
   'soba-biz': 'border-indigo-500 bg-indigo-50',
@@ -26,6 +28,8 @@ const accordionColorMap = {
   energy: 'bg-emerald-100 hover:bg-emerald-200',
   ofa: 'bg-amber-100 hover:bg-amber-200',
   okc: 'bg-orange-100 hover:bg-orange-200',
+  'okc-fizit': 'bg-orange-100 hover:bg-orange-200',
+  'okc-summoxone': 'bg-orange-100 hover:bg-orange-200',
   'okc-talento': 'bg-orange-100 hover:bg-orange-200',
   'okc-ou-med': 'bg-orange-100 hover:bg-orange-200',
   'soba-biz': 'bg-indigo-100 hover:bg-indigo-200',
@@ -41,13 +45,29 @@ const accordionColorMap = {
 
 const defaultColor = 'border-[#841617] bg-white'
 const defaultAccordionColor = 'bg-[#f6e9cf] hover:bg-[#ead9b0]'
+const theMineColor = 'border-fuchsia-600 bg-fuchsia-50'
+const theMineAccordionColor = 'bg-fuchsia-100 hover:bg-fuchsia-200'
+const summerColors = [
+  { card: 'border-teal-500 bg-teal-50', accordion: 'bg-teal-100 hover:bg-teal-200' },
+  { card: 'border-violet-500 bg-violet-50', accordion: 'bg-violet-100 hover:bg-violet-200' },
+  { card: 'border-rose-500 bg-rose-50', accordion: 'bg-rose-100 hover:bg-rose-200' },
+  { card: 'border-lime-600 bg-lime-50', accordion: 'bg-lime-100 hover:bg-lime-200' },
+]
+
+function summerColorFor(program) {
+  const displayOrder = Number.isInteger(program.displayOrder)
+    ? program.displayOrder
+    : [...program.id].reduce((total, character) => total + character.charCodeAt(0), 0)
+
+  return summerColors[displayOrder % summerColors.length]
+}
 
 function createEditForm(program, isStaffCard) {
   return {
     name: program.name ?? '',
     location: program.location ?? '',
     fellow: program.fellow ?? '',
-    teamLead: program.teamLead ?? '',
+    teamLead: (program.teamLeads ?? (program.teamLead ? [program.teamLead] : [])).join('\n'),
     interns: (program.interns ?? []).join('\n'),
     staff: isStaffCard
       ? program.members
@@ -74,6 +94,7 @@ function peopleFromLines(value, defaultRole) {
 export default function ProgramCard({
   program,
   semesterId,
+  highlighted = false,
   accordionOpen,
   onAccordionToggle,
   onSave,
@@ -90,10 +111,22 @@ export default function ProgramCard({
   const [saveError, setSaveError] = useState(null)
   const isControlled = typeof accordionOpen === 'boolean'
   const isAccordionOpen = isControlled ? accordionOpen : localAccordionOpen
-  const colors = colorMap[program.id] || defaultColor
-  const accordionColors = accordionColorMap[program.id] || defaultAccordionColor
   const isStaffCard = Array.isArray(program.members)
+  const isSummerSemester = semesterId?.startsWith('summer-')
+  const isTheMineProgram = program.groupType?.startsWith('The Mine')
+    || program.name?.startsWith('The Mine')
+  const showsProject = isSummerSemester || program.groupType === 'The Mine Project'
+  const summerColor = isSummerSemester && !isStaffCard && !isTheMineProgram
+    ? summerColorFor(program)
+    : null
+  const colors = isTheMineProgram
+    ? theMineColor
+    : summerColor?.card || colorMap[program.id] || defaultColor
+  const accordionColors = isTheMineProgram
+    ? theMineAccordionColor
+    : summerColor?.accordion || accordionColorMap[program.id] || defaultAccordionColor
   const people = isStaffCard ? program.members : (program.interns ?? [])
+  const teamLeads = program.teamLeads ?? (program.teamLead ? [program.teamLead] : [])
   const [editForm, setEditForm] = useState(() => createEditForm(program, isStaffCard))
 
   function handleAccordionToggle(isOpen) {
@@ -129,10 +162,8 @@ export default function ProgramCard({
         ...(editForm.fellow.trim()
           ? [{ name: editForm.fellow.trim(), role: 'Fellow' }]
           : []),
-        ...(editForm.teamLead.trim()
-          ? [{ name: editForm.teamLead.trim(), role: 'Team Lead' }]
-          : []),
-        ...peopleFromLines(editForm.interns, 'Intern'),
+        ...peopleFromLines(editForm.teamLead, 'Team Lead'),
+        ...peopleFromLines(editForm.interns, program.peopleRole ?? 'Intern'),
       ]
 
     try {
@@ -182,7 +213,7 @@ export default function ProgramCard({
         onDragOver={onDragOver}
         onDrop={onDrop}
         onDragEnd={onDragEnd}
-        className={`${isAccordionOpen ? 'min-h-80' : 'min-h-40'} rounded-xl border-2 p-4 text-[#323232] shadow-[0_3px_10px_rgba(50,50,50,0.12)] ${colors} ${draggable ? 'cursor-grab active:cursor-grabbing' : ''}`}
+        className={`${isAccordionOpen ? 'min-h-80' : 'min-h-40'} rounded-xl border-2 p-4 text-[#323232] shadow-[0_3px_10px_rgba(50,50,50,0.12)] ${colors} ${highlighted ? 'ring-4 ring-[#841617] ring-offset-4' : ''} ${draggable ? 'cursor-grab active:cursor-grabbing' : ''}`}
       >
         <div className="mb-3 flex items-center gap-2">
           <div className="flex items-center gap-2">
@@ -206,6 +237,11 @@ export default function ProgramCard({
               <span className="text-[#5a5a5a]">Location:</span> {program.location}
             </p>
           )}
+          {showsProject && program.project && (
+            <p>
+              <span className="text-[#5a5a5a]">Project:</span> {program.project}
+            </p>
+          )}
           {!isStaffCard && (
             <>
               <p
@@ -214,19 +250,26 @@ export default function ProgramCard({
               >
                 <span className="text-[#5a5a5a]">Fellow:</span> {program.fellow}
               </p>
-              <p
-                data-semester-id={semesterId}
-                data-team-lead={program.teamLead ?? undefined}
-              >
-                <span className="text-[#5a5a5a]">Team Lead:</span> {program.teamLead}
-              </p>
+              {teamLeads.length > 0 ? teamLeads.map((teamLead) => (
+                <p
+                  key={teamLead}
+                  data-semester-id={semesterId}
+                  data-team-lead={teamLead}
+                >
+                  <span className="text-[#5a5a5a]">Team Lead:</span> {teamLead}
+                </p>
+              )) : (
+                <p>
+                  <span className="text-[#5a5a5a]">Team Lead:</span>
+                </p>
+              )}
             </>
           )}
         </div>
 
         <InternsAccordion
           people={people}
-          label={isStaffCard ? 'Staff' : 'Interns'}
+          label={isStaffCard ? 'Staff' : program.peopleLabel ?? 'Interns'}
           linkable={!isStaffCard}
           semesterId={semesterId}
           open={isAccordionOpen}
@@ -304,11 +347,13 @@ export default function ProgramCard({
                 </label>
 
                 <label className="mb-4 block text-sm font-medium text-[#323232]">
-                  Team lead
-                  <input
+                  Team leads
+                  <span className="mt-1 block text-xs font-normal text-[#5a5a5a]">One person per line.</span>
+                  <textarea
+                    rows={3}
                     value={editForm.teamLead}
                     onChange={(event) => updateField('teamLead', event.target.value)}
-                    className="mt-1 w-full rounded border border-[#323232]/40 bg-white px-3 py-2 text-[#323232]"
+                    className="mt-2 w-full rounded border border-[#323232]/40 bg-white px-3 py-2 text-[#323232]"
                   />
                 </label>
 

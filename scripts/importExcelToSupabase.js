@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import process from "node:process";
 import { createClient } from "@supabase/supabase-js";
 import XLSX from "xlsx";
 
@@ -14,7 +15,7 @@ if (!supabaseUrl || !supabaseSecretKey) {
 const supabase = createClient(supabaseUrl, supabaseSecretKey);
 
 // Test Supabase connection
-const { data, error } = await supabase.from("semesters").select("*").limit(1);
+const { error } = await supabase.from("semesters").select("*").limit(1);
 
 if (error) {
   console.error("Supabase connection failed:", error.message);
