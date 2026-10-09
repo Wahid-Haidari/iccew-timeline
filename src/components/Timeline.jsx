@@ -303,11 +303,19 @@ export default function Timeline({
   const timelineRef = useRef(null)
   const timelineHeaderScrollRef = useRef(null)
   const timelineBodyScrollRef = useRef(null)
+  const timelineScrollbarTrackRef = useRef(null)
+  const timelineScrollbarDragRef = useRef(null)
   const [openAccordions, setOpenAccordions] = useState({})
   const [familyTreeVisible, setFamilyTreeVisible] = useState(false)
   const [lineData, setLineData] = useState({ width: 0, height: 0, lines: [] })
   const [searchQuery, setSearchQuery] = useState('')
   const [highlightedGroup, setHighlightedGroup] = useState(null)
+  const [timelineScroll, setTimelineScroll] = useState({
+    content: 0,
+    max: 0,
+    value: 0,
+    viewport: 0,
+  })
   const draggedCardRef = useRef(null)
   const [dropIndicator, setDropIndicator] = useState(null)
   const [reorderError, setReorderError] = useState(null)
@@ -318,6 +326,12 @@ export default function Timeline({
       ? `repeat(${semesters.length}, 20rem)`
       : '20rem',
   }
+  const timelineScrollbarThumbWidth = timelineScroll.content > 0
+    ? Math.min(100, Math.max(4, (timelineScroll.viewport / timelineScroll.content) * 100))
+    : 100
+  const timelineScrollbarThumbOffset = timelineScroll.max > 0
+    ? (timelineScroll.value / timelineScroll.max) * (100 - timelineScrollbarThumbWidth)
+    : 0
 
   useLayoutEffect(() => {
     const timeline = timelineRef.current
@@ -348,6 +362,33 @@ export default function Timeline({
     }
   }, [familyTreeVisible, openAccordions, semesters])
 
+  useLayoutEffect(() => {
+    const timelineScroller = timelineBodyScrollRef.current
+    const timeline = timelineRef.current
+
+    if (!timelineScroller) {
+      return undefined
+    }
+
+    function updateTimelineScrollControl() {
+      setTimelineScroll(getTimelineScrollState(timelineScroller))
+    }
+
+    updateTimelineScrollControl()
+
+    const observer = new ResizeObserver(updateTimelineScrollControl)
+    observer.observe(timelineScroller)
+    if (timeline) {
+      observer.observe(timeline)
+    }
+    window.addEventListener('resize', updateTimelineScrollControl)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', updateTimelineScrollControl)
+    }
+  }, [semesters])
+
   function handleAccordionToggle(semesterId, programId, isOpen) {
     setOpenAccordions((current) => ({
       ...current,
@@ -362,6 +403,132 @@ export default function Timeline({
 
     if (target && target.scrollLeft !== source.scrollLeft) {
       target.scrollLeft = source.scrollLeft
+    }
+
+    const timelineScroller = timelineBodyScrollRef.current
+    if (timelineScroller) {
+      setTimelineScroll(getTimelineScrollState(timelineScroller, source.scrollLeft))
+    }
+  }
+
+  function getTimelineScrollState(timelineScroller, value = timelineScroller.scrollLeft) {
+    const max = Math.max(0, timelineScroller.scrollWidth - timelineScroller.clientWidth)
+
+    return {
+      content: timelineScroller.scrollWidth,
+      max,
+      value: Math.max(0, Math.min(value, max)),
+      viewport: timelineScroller.clientWidth,
+    }
+  }
+
+  function setTimelineScrollLeft(value) {
+    const timelineScroller = timelineBodyScrollRef.current
+
+    if (!timelineScroller) {
+      return
+    }
+
+    const { max } = getTimelineScrollState(timelineScroller)
+    const nextValue = Math.max(0, Math.min(value, max))
+
+    timelineScroller.scrollLeft = nextValue
+    if (timelineHeaderScrollRef.current) {
+      timelineHeaderScrollRef.current.scrollLeft = nextValue
+    }
+    setTimelineScroll(getTimelineScrollState(timelineScroller, nextValue))
+  }
+
+  function scrollFromTimelineScrollbar(clientX, pointerOffset) {
+    const track = timelineScrollbarTrackRef.current
+    const timelineScroller = timelineBodyScrollRef.current
+
+    if (!track || !timelineScroller) {
+      return
+    }
+
+    const trackRect = track.getBoundingClientRect()
+    const scrollState = getTimelineScrollState(timelineScroller)
+    const thumbWidth = trackRect.width * (timelineScrollbarThumbWidth / 100)
+    const thumbTravel = trackRect.width - thumbWidth
+    const thumbLeft = Math.max(
+      0,
+      Math.min(clientX - trackRect.left - pointerOffset, thumbTravel),
+    )
+    const nextValue = thumbTravel > 0
+      ? (thumbLeft / thumbTravel) * scrollState.max
+      : 0
+
+    setTimelineScrollLeft(nextValue)
+  }
+
+  function handleTimelineScrollbarPointerDown(event) {
+    if (timelineScroll.max === 0) {
+      return
+    }
+
+    const track = timelineScrollbarTrackRef.current
+    const thumb = event.target.closest('[data-timeline-scroll-thumb]')
+    const thumbRect = thumb?.getBoundingClientRect()
+    const trackRect = track?.getBoundingClientRect()
+
+    if (!trackRect) {
+      return
+    }
+
+    const pointerOffset = thumbRect
+      ? event.clientX - thumbRect.left
+      : (trackRect.width * (timelineScrollbarThumbWidth / 100)) / 2
+
+    timelineScrollbarDragRef.current = pointerOffset
+    event.currentTarget.setPointerCapture(event.pointerId)
+    scrollFromTimelineScrollbar(event.clientX, pointerOffset)
+  }
+
+  function handleTimelineScrollbarPointerMove(event) {
+    if (timelineScrollbarDragRef.current === null) {
+      return
+    }
+
+    scrollFromTimelineScrollbar(event.clientX, timelineScrollbarDragRef.current)
+  }
+
+  function handleTimelineScrollbarPointerUp(event) {
+    timelineScrollbarDragRef.current = null
+    event.currentTarget.releasePointerCapture?.(event.pointerId)
+  }
+
+  function handleTimelineScrollbarKeyDown(event) {
+    const timelineScroller = timelineBodyScrollRef.current
+
+    if (!timelineScroller) {
+      return
+    }
+
+    const pageStep = Math.max(80, timelineScroller.clientWidth * 0.9)
+    const arrowStep = Math.max(40, timelineScroller.clientWidth * 0.1)
+    const keySteps = {
+      ArrowLeft: -arrowStep,
+      ArrowRight: arrowStep,
+      PageDown: pageStep,
+      PageUp: -pageStep,
+    }
+
+    if (event.key === 'Home') {
+      event.preventDefault()
+      setTimelineScrollLeft(0)
+      return
+    }
+
+    if (event.key === 'End') {
+      event.preventDefault()
+      setTimelineScrollLeft(timelineScroll.max)
+      return
+    }
+
+    if (keySteps[event.key] !== undefined) {
+      event.preventDefault()
+      setTimelineScrollLeft(timelineScroller.scrollLeft + keySteps[event.key])
     }
   }
 
@@ -423,10 +590,7 @@ export default function Timeline({
 
         // Set both synchronized scroll containers directly. A smooth scroll on
         // one can be interrupted while the other container is catching up.
-        timelineScroller.scrollLeft = targetScrollLeft
-        if (timelineHeaderScrollRef.current) {
-          timelineHeaderScrollRef.current.scrollLeft = targetScrollLeft
-        }
+        setTimelineScrollLeft(targetScrollLeft)
       }
 
       window.scrollTo({
@@ -673,9 +837,38 @@ export default function Timeline({
             </div>
           </div>
         </div>
+        <div className="border-t border-[#841617]/20 px-8 py-2">
+          <div
+            ref={timelineScrollbarTrackRef}
+            role="scrollbar"
+            aria-controls="timeline-cards"
+            aria-label="Scroll through semesters"
+            aria-orientation="horizontal"
+            aria-valuemin={0}
+            aria-valuemax={timelineScroll.max}
+            aria-valuenow={timelineScroll.value}
+            tabIndex={timelineScroll.max > 0 ? 0 : -1}
+            onKeyDown={handleTimelineScrollbarKeyDown}
+            onPointerDown={handleTimelineScrollbarPointerDown}
+            onPointerMove={handleTimelineScrollbarPointerMove}
+            onPointerUp={handleTimelineScrollbarPointerUp}
+            onPointerCancel={handleTimelineScrollbarPointerUp}
+            className={`relative h-2 w-full touch-none rounded-full border border-[#841617]/35 bg-[#f6e9cf] p-px shadow-inner ${timelineScroll.max > 0 ? 'cursor-ew-resize focus:outline-2 focus:outline-offset-2 focus:outline-[#841617]' : 'cursor-default'}`}
+          >
+            <div
+              data-timeline-scroll-thumb
+              className="absolute inset-y-px rounded-full bg-[#841617] shadow-sm transition-colors hover:bg-[#681112]"
+              style={{
+                left: `${timelineScrollbarThumbOffset}%`,
+                width: `${timelineScrollbarThumbWidth}%`,
+              }}
+            />
+          </div>
+        </div>
       </div>
 
       <div
+        id="timeline-cards"
         ref={timelineBodyScrollRef}
         onScroll={(event) => syncTimelineScroll(event.currentTarget)}
         className="w-full overflow-x-auto"
