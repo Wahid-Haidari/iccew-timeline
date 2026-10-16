@@ -19,10 +19,45 @@ function peopleFromLines(value, defaultRole) {
     .map((name) => ({ name, role: defaultRole }))
 }
 
+function semesterOptions(semesters) {
+  const options = semesters.map((semester) => ({
+    id: semester.id,
+    label: semester.label,
+  }))
+  const years = new Set(
+    semesters
+      .map((semester) => Number(semester.id.match(/-(\d{4})$/)?.[1]))
+      .filter(Number.isInteger),
+  )
+
+  for (const year of years) {
+    const summerId = `summer-${year}`
+
+    if (!options.some((option) => option.id === summerId)) {
+      options.push({
+        id: `new:Summer:${year}`,
+        label: `Summer ${year}`,
+      })
+    }
+  }
+
+  const termOrder = { Spring: 1, Summer: 2, Fall: 3 }
+
+  return options.sort((a, b) => {
+    const [, aTerm, aYear] = a.id.match(/^(?:new:)?(Spring|Summer|Fall)[:-](\d{4})$/i) ?? []
+    const [, bTerm, bYear] = b.id.match(/^(?:new:)?(Spring|Summer|Fall)[:-](\d{4})$/i) ?? []
+
+    return Number(aYear) - Number(bYear)
+      || termOrder[aTerm?.[0].toUpperCase() + aTerm?.slice(1).toLowerCase()]
+        - termOrder[bTerm?.[0].toUpperCase() + bTerm?.slice(1).toLowerCase()]
+  })
+}
+
 export default function CreateTeamModal({ semesters, onClose, onCreate }) {
   const [form, setForm] = useState(createInitialForm)
   const [saving, setSaving] = useState(false)
   const [saveError, setSaveError] = useState(null)
+  const options = semesterOptions(semesters)
 
   function updateField(field, value) {
     setForm((current) => ({ ...current, [field]: value }))
@@ -43,8 +78,14 @@ export default function CreateTeamModal({ semesters, onClose, onCreate }) {
       return
     }
 
-    if (name.toLocaleLowerCase() === 'staff') {
-      setSaveError('Use the existing Staff card instead of creating a new team named Staff.')
+    const isStaff = name.toLocaleLowerCase() === 'staff'
+    const selectedSemester = semesters.find((semester) => semester.id === form.semesterId)
+    const hasStaffCard = selectedSemester?.programs.some(
+      (program) => program.name.toLocaleLowerCase() === 'staff',
+    )
+
+    if (isStaff && hasStaffCard) {
+      setSaveError('This semester already has a Staff card.')
       return
     }
 
@@ -64,6 +105,7 @@ export default function CreateTeamModal({ semesters, onClose, onCreate }) {
       await onCreate({
         semesterId: form.semesterId,
         name,
+        isStaff,
         location: form.location.trim(),
         members,
       })
@@ -111,13 +153,13 @@ export default function CreateTeamModal({ semesters, onClose, onCreate }) {
             required
             value={form.semesterId}
             onChange={(event) => updateField('semesterId', event.target.value)}
-            disabled={saving || semesters.length === 0}
+            disabled={saving || options.length === 0}
             className="mt-1 w-full rounded border border-[#323232]/40 bg-white px-3 py-2 text-[#323232] disabled:cursor-not-allowed disabled:bg-[#f0f0f0]"
           >
             <option value="" disabled>
-              {semesters.length === 0 ? 'No semesters available' : 'Select a semester'}
+              {options.length === 0 ? 'No semesters available' : 'Select a semester'}
             </option>
-            {semesters.map((semester) => (
+            {options.map((semester) => (
               <option key={semester.id} value={semester.id}>
                 {semester.label}
               </option>
@@ -194,7 +236,7 @@ export default function CreateTeamModal({ semesters, onClose, onCreate }) {
           </button>
           <button
             type="submit"
-            disabled={saving || semesters.length === 0}
+            disabled={saving || options.length === 0}
             className="rounded bg-[#841617] px-4 py-2 text-sm font-semibold text-white hover:bg-[#681112] disabled:cursor-not-allowed disabled:opacity-60"
           >
             {saving ? 'Creating…' : 'Create team'}

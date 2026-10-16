@@ -379,6 +379,43 @@ export async function saveProgramOrder(programs) {
   return results;
 }
 
+export async function createSemesterInSupabase(year, term) {
+  if (!Number.isInteger(year) || year < 1900 || year > 2100) {
+    throw new Error("Please choose a valid semester year.");
+  }
+
+  if (!Object.hasOwn(termOrder, term)) {
+    throw new Error("Please choose a valid semester term.");
+  }
+
+  const { data, error } = await supabase
+    .from("semesters")
+    .insert({ year, term })
+    .select("id, year, term")
+    .single();
+
+  if (!error) {
+    return data;
+  }
+
+  // If someone else created the same semester immediately beforehand, use
+  // that record instead of treating the unique-key collision as a failure.
+  if (error.code === "23505") {
+    const { data: existingSemester, error: selectError } = await supabase
+      .from("semesters")
+      .select("id, year, term")
+      .eq("year", year)
+      .eq("term", term)
+      .single();
+
+    if (!selectError) {
+      return existingSemester;
+    }
+  }
+
+  throw new Error(`Could not create the semester: ${error.message}`);
+}
+
 export async function createProgramInSupabase(semesterId, changes) {
   if (!semesterId) {
     throw new Error("Please choose a semester for the new team.");
@@ -396,8 +433,8 @@ export async function createProgramInSupabase(semesterId, changes) {
       semester_id: semesterId,
       name,
       location: changes.location?.trim() || null,
-      is_staff: false,
-      group_type: null,
+      is_staff: Boolean(changes.isStaff),
+      group_type: changes.isStaff ? "Staff" : null,
       // Keep this null for semesters that have never been manually ordered.
       // For ordered semesters, App supplies the next position so the new card
       // appears at the end until it is dragged elsewhere.

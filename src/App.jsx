@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Timeline from "./components/Timeline";
 import {
+  createSemesterInSupabase,
   createProgramInSupabase,
   deleteProgramFromSupabase,
   loadTimelineFromSupabase,
@@ -73,9 +74,23 @@ function App() {
   }
 
   async function handleProgramCreate(changes) {
-    const semester = timeline.find((timelineSemester) => (
+    let semester = timeline.find((timelineSemester) => (
       timelineSemester.id === changes.semesterId
     ));
+
+    const missingSemester = changes.semesterId.match(/^new:(Spring|Summer|Fall):(\d{4})$/);
+
+    if (!semester && missingSemester) {
+      const [, term, year] = missingSemester;
+      const createdSemester = await createSemesterInSupabase(Number(year), term);
+
+      semester = {
+        id: `${term.toLowerCase()}-${year}`,
+        databaseId: createdSemester.id,
+        label: `${term} ${year}`,
+        programs: [],
+      };
+    }
 
     if (!semester?.databaseId) {
       throw new Error("The selected semester could not be found.");
@@ -85,7 +100,9 @@ function App() {
       .map((program) => program.displayOrder)
       .filter((displayOrder) => displayOrder !== null && displayOrder !== undefined);
     const displayOrder = savedOrders.length > 0
-      ? Math.max(...savedOrders) + 1
+      ? changes.isStaff
+        ? Math.min(...savedOrders) - 1
+        : Math.max(...savedOrders) + 1
       : null;
 
     await createProgramInSupabase(semester.databaseId, {
